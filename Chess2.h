@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <iostream>
 #include <cstdint>
 
 #include "ChessUtils.h"
@@ -22,6 +21,7 @@ struct ChessMove {
 	inline bool pawnPushed() { return flags() == 1; }
 	inline bool enPassant() { return flags() == 5; }
 	inline void setFlags(uint8_t x) { move = (move & ((1<<12) - 1)) | (x<<12); }
+	inline bool castle() { return move == 2 || move == 3; }
 	uint16_t counter = 0;
 
 	ChessMove() { }
@@ -269,6 +269,10 @@ struct ChessPosition {
 		return isInCheck() && noLegalMoves();
 	}
 
+	bool canCastle() {
+		return data & (sideToMove() ? (BRCASTLE | BLCASTLE) : (WRCASTLE | WLCASTLE));
+	}
+
 	// a stalemate happens in !isInCheck() && noLegalMoves()
 
 	bool isLegalMove(ChessMove& move) {
@@ -331,9 +335,9 @@ struct ChessPosition {
 		uint64_t whites = getAllPieces(0);
 		std::vector<ChessMove> moves;
 		for (int8_t i = 0; i < 64; i++) {
+			if (!(stm ? blacks : whites) & onehot(i)) continue;
 			for (int8_t j = 0; j < 64; j++) {
 				if (i == j) continue;
-				if (!(stm ? blacks : whites) & onehot(i)) continue;
 				ChessMove move(i, j, 0);
 				if (isLegalMove(move)) {
 					moves.push_back(move);
@@ -345,6 +349,34 @@ struct ChessPosition {
 					}
 				}
 			}
+		}
+		setSTM(originalSTM);
+
+		return moves;
+	}
+
+	std::vector<ChessMove> possibleLegalMovesPerSquare(bool stm, int8_t i) {
+		bool originalSTM = sideToMove();
+		std::vector<ChessMove> moves;
+	
+		uint64_t blacks = getAllPieces(1);
+		uint64_t whites = getAllPieces(0);
+		if (!(stm ? blacks : whites) & onehot(i)) return moves;
+
+		setSTM(stm);
+
+		for (int8_t j = 0; j < 64; j++) {
+				if (i == j) continue;
+				ChessMove move(i, j, 0);
+				if (isLegalMove(move)) {
+					moves.push_back(move);
+					if (move.move & PROMOTION) {
+						for (int i = 0; i < 3; i++) {
+							move.move += FLAG0;
+							moves.push_back(move);
+						}
+					}
+				}
 		}
 		setSTM(originalSTM);
 
@@ -465,18 +497,5 @@ struct ChessPosition {
 		return res;
 	}
 };
-
-// BEGIN STATICS
-
-void printMoves(ChessPosition& pos, bool side = 0, int cols = 3) {
-	if (cols < 0) cols = 1;
-	std::cout << (side ? "Black" : "White") << " possible moves: \n";
-	int ctr = 0;
-	for (auto x : pos.possibleLegalMoves(side)) {
-		cout << x.to_string() << " ";
-		if (++ctr % cols == 0) std::cout << "\n";
-	}
-	if (ctr % cols) std::cout << "\n";
-}
 
 #endif

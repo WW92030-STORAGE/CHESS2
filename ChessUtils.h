@@ -19,6 +19,8 @@ constexpr uint8_t WRCASTLE = 1<<2;
 constexpr uint8_t BLCASTLE = 1<<3;
 constexpr uint8_t BRCASTLE = 1<<4;
 
+// BEGIN GENERAL BIT THINGS
+
 std::string u8tos(uint8_t v) {
 	std::string res = "xxxxxxxx";
 	for (int i = 8; i--; ) {
@@ -51,6 +53,20 @@ std::string u64togrid(uint64_t v) {
 	} 
 	return res;
 }
+
+// cpw
+int8_t popCount(uint64_t x) {
+    constexpr uint64_t k1 = uint64_t(0x5555555555555555);
+    constexpr uint64_t k2 = uint64_t(0x3333333333333333);
+    constexpr uint64_t k4 = uint64_t(0x0f0f0f0f0f0f0f0f);
+    x =   x             - ((x >> 1)  & k1);
+    x =  (x & k2)       + ((x >> 2)  & k2);
+    x = ( x             +  (x >> 4)) & k4 ;
+    x = (x * uint64_t(0x0101010101010101))>> 56;
+    return (int8_t) x;
+}
+
+// END GENERAL BIT THINGS
 
 std::string pieceName(uint8_t v) {
 	std::string res = "..";
@@ -318,7 +334,7 @@ uint64_t rotateRight(uint64_t x) { return flipVertical(flipDiagonal(x)); }
 
 // https://chessprogramming.org/Classical_Approach. Using this you go from a for loop to a single value
 // This method determines, given a line and a side, a ray spanning from the line to the first blocker on the ray.
-// In case of possible captures, said blocker is included.
+// In case of possible captures, said blocker is included. (Landing on a piece of the same color will be filtered out in the actual legality check way before this happens.)
 uint64_t rayAttack(uint64_t line, uint64_t occupied, int8_t src, bool side) {
 	if (side) {
 		uint64_t ray = line & positiveSide(src);
