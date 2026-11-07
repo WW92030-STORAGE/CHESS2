@@ -114,6 +114,36 @@ struct ChessPosition {
 		return res;
 	}
 
+	// is it being attacked? (this does not include en passants)
+	bool isBeingAttacked(int8_t s, bool sta) {
+		uint64_t occ = getAllPieces(0) | getAllPieces(1);
+		// pawns
+		if (sta) { // black attacks from above
+			if (s < 56 && (black[0] & (onehot(s + 7) | onehot(s + 9)))) return true;
+		} else if (s > 7 && (white[0] & (onehot(s - 7) | onehot(s - 9)))) return true;
+		// knights
+		uint64_t knightField = knightBB[s];
+		if ((sta ? black : white)[1] & knightField) return true;
+
+		// bishops
+		int8_t sum = (s>>3) + (s & 7);
+		int8_t diff = (s>>3) - (s & 7);
+		uint64_t diagonals = rayAttack(diagonalBB(diff), occ, s, 0) | rayAttack(diagonalBB(diff), occ, s, 1) | rayAttack(bisectorBB[sum], occ, s, 0) | rayAttack(bisectorBB[sum], occ, s, 1);
+		if ((sta ? black : white)[2] & diagonals) return true;
+
+		// rooks
+		uint64_t cardinals = rayAttack(rankBB[s>>3], occ, s, 0) | rayAttack(rankBB[s>>3], occ, s, 1) | rayAttack(fileBB[s & 7], occ, s, 0) | rayAttack(fileBB[s & 7], occ, s, 1);
+		if ((sta ? black : white)[3] & cardinals) return true;
+
+		// queens
+		if ((sta ? black : white)[4] & (diagonals | cardinals)) return true;
+
+		// kings
+		if ((sta ? black : white)[5] & kingBB(s)) return true;
+
+		return false;
+	}
+
 	// Returns if the move is pseudolegal, and tries to correct the flags. (Be aware that an illegal move might still have flags changed.)
 	bool isPseudoLegalMove(ChessMove& move) {
 		bool stm = sideToMove();
@@ -228,8 +258,18 @@ struct ChessPosition {
 	}
 
 	bool isInCheck() {
-		return (isAttackedBy(bitScanForward((sideToMove() ? black : white)[5]), !sideToMove()));
+		return (isBeingAttacked(bitScanForward((sideToMove() ? black : white)[5]), !sideToMove()));
 	}
+
+	bool noLegalMoves() {
+		return possibleLegalMoves(sideToMove()).size() == 0;
+	}
+
+	bool checkmated() {
+		return isInCheck() && noLegalMoves();
+	}
+
+	// a stalemate happens in !isInCheck() && noLegalMoves()
 
 	bool isLegalMove(ChessMove& move) {
 		if (!isPseudoLegalMove(move)) return false;
