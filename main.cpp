@@ -6,10 +6,11 @@ using namespace std;
 #include "blackboxies.h"
 
 int main() {
-	Turochamp eval;
-	AlphaBetaEngine mmSearch{&eval};
-	AlphaBetaEngine noobSearch{&eval};
+	Turochamp tcEval;
+	Evaluation noobEval;
+	AlphaBetaEngine mmSearch{&tcEval};
+	AlphaBetaEngine noobSearch{&noobEval};
 	// playAgainstEngine(mmSearch, 1, 4);
-	EngineOnEngine(mmSearch, mmSearch, 2, 2);
+	EngineOnEngine(mmSearch, noobSearch, 3, 2);
 	return 0;
 }

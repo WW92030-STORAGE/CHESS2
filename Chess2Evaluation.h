@@ -33,18 +33,19 @@ struct Evaluation {
 		}
 		if (pos.isInCheck()) {
 			if (res > 0) res>>=1;
-			else res = res + (res>>1);
+			else res = res + res;
 		}
 		pos.setSTM(originalSTM);
 		return res;
 	}
 	virtual eval_t evaluate(ChessPosition& pos) {
 		if (pos.noLegalMoves() || pos.forcedStalemate()) {
-			return -(CH2_INF>>2);
+			if (pos.isInCheck()) return -(CH2_INF>>1);
+			return 0;
 		}
 		eval_t res = evaluateSingleSide(pos, 1) - evaluateSingleSide(pos, 0);
 		if (!pos.sideToMove()) res = -res;
-		return res - pos.hmc * pos.hmc;
+		return res;
 	}
 
 	eval_t operator()(ChessPosition& pos) { return evaluate(pos); }
@@ -56,6 +57,10 @@ struct Turochamp : Evaluation {
 		bool originalSTM = pos.sideToMove();
 		pos.setSTM(stm);
 		eval_t res = 0;
+		const int weights[5] = {100, 300, 350, 500, 1000}; // everything is scaled up by 100 to adhere to the centipawns metric
+		for (int i = 0; i < 5; i++) {
+			res += weights[i] * popCount((stm ? pos.black : pos.white)[i]);
+		}
 
 		// 1. add square root of number of moves per piece except kings and pawns
 		uint64_t rbn = stm ? (pos.black[1] | pos.black[2] | pos.black[3]) : (pos.white[1] | pos.white[2] | pos.white[3]);
@@ -107,7 +112,7 @@ struct Turochamp : Evaluation {
 
 		if (pos.isInCheck()) {
 			if (res > 0) res>>=1;
-			else res = res + (res>>1);
+			else res = res + res;
 		}
 
 		pos.setSTM(originalSTM);

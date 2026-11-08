@@ -1,8 +1,9 @@
+
+
 #ifndef CHESS2_SEARCH_H_NORMALEXISTING
 #define CHESS2_SEARCH_H_NORMALEXISTING
 
 #include "Chess2.h"
-#include "ChessUtils.h"
 #include "Chess2Evaluation.h"
 
 // Base class of a search system. The required fields are the Evaluation*, and a function search(ChessPosition& pos, int depth) --> ChessMove.
@@ -21,6 +22,7 @@ struct SearchEngine {
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
@@ -35,10 +37,11 @@ struct SearchEngine {
 	} 
 
 	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1) {
-		if (depth <= 0) return {ChessMove(), -evaluate(pos)};
+		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
@@ -61,7 +64,7 @@ struct AlphaBetaEngine : SearchEngine {
 	AlphaBetaEngine(Evaluation* e = 0) : SearchEngine(e) {  }
 
 	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
-		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
@@ -83,7 +86,7 @@ struct AlphaBetaEngine : SearchEngine {
 	} 
 
 	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
-		if (depth <= 0) return {ChessMove(), -evaluate(pos)};
+		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {

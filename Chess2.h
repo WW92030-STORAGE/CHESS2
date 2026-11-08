@@ -272,7 +272,7 @@ struct ChessPosition {
 	}
 
 	bool forcedStalemate() {
-		return hmc >= 75;
+		return hmc >= 150;
 	}
 
 	bool canCastle() {
