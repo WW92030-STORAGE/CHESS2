@@ -56,6 +56,7 @@ struct ChessPosition {
 
 	inline bool sideToMove() { return data & 1; }
 	inline void setSTM(bool value) { data = (data & 254) | value; }
+	inline void flipSTM() { data ^= 1; }
 
 	void clear() {
 		for (int i = 0; i < 6; i++) black[i] = white[i] = 0;
@@ -91,8 +92,14 @@ struct ChessPosition {
 		uint64_t res = 0;
 		// pawns
 		if (sta) { // black attacks from above
-			if (s < 56) res |= (black[0] & (onehot(s + 7) | onehot(s + 9)));
-		} else if (s > 7) res |= (white[0] & (onehot(s - 7) | onehot(s - 9)));
+			if (s < 56) {
+				if (s&7) res |= (black[0] & (onehot(s + 7)));
+				if ((s&7) < 7) res |= (black[0] & (onehot(s + 9)));
+			}
+		} else if (s > 7) {
+			if (s&7) res |= (white[0] & (onehot(s - 9)));
+			if ((s&7) < 7) res |= (white[0] & (onehot(s - 7)));
+		}
 		// knights
 		uint64_t knightField = knightBB[s];
 		res |= (sta ? black : white)[1] & knightField;
@@ -121,8 +128,14 @@ struct ChessPosition {
 		uint64_t occ = getAllPieces(0) | getAllPieces(1);
 		// pawns
 		if (sta) { // black attacks from above
-			if (s < 56 && ((s&7) && (black[0] & onehot(s + 7)) | ((s&7 < 7) && (white[0] & onehot(s + 9))) )) return true;
-		} else if (s > 7 && ((s&7) && (white[0] & onehot(s - 9)) | ((s&7 < 7) && (white[0] & onehot(s - 7))) )) return true;
+			if (s < 56) {
+				if (s&7 && (black[0] & (onehot(s + 7)))) return true;
+				if ((s&7) < 7 && (black[0] & (onehot(s + 9)))) return true;
+			}
+		} else if (s > 7) {
+			if (s&7 && (white[0] & (onehot(s - 9)))) return true;
+			if ((s&7) < 7 && (white[0] & (onehot(s - 7)))) return true;
+		}
 		// knights
 		uint64_t knightField = knightBB[s];
 		if ((sta ? black : white)[1] & knightField) return true;
