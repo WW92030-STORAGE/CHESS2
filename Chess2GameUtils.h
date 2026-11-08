@@ -201,6 +201,7 @@ void EngineOnEngine(SearchEngine& white, SearchEngine& black, int wd = 4, int bd
 	pos.init();
 	while (true) {
 		std::cout << pos.to_string() << "\nEVAL(" << pos.sideToMove() << "): " << (pos.sideToMove() ? black : white).eval->evaluate(pos) << "\n";
+		// printMovesWithEvals(pos, *((pos.sideToMove() ? black : white).eval), 3);
 		if (pos.checkmated()) {
 			cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
 			break;
@@ -208,7 +209,6 @@ void EngineOnEngine(SearchEngine& white, SearchEngine& black, int wd = 4, int bd
 			cout << "STALEMATE - Game end\n";
 			break;
 		}
-		// printMovesWithEvals(pos, *((pos.sideToMove() ? black : white).eval), 3);
 		ChessMove move;
 		move = (pos.sideToMove() ? black : white).search(pos, pos.sideToMove() ? bd : wd);
 		std::cout << "Chosen move: " << move.to_string() << "\n"; 
