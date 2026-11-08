@@ -121,8 +121,8 @@ struct ChessPosition {
 		uint64_t occ = getAllPieces(0) | getAllPieces(1);
 		// pawns
 		if (sta) { // black attacks from above
-			if (s < 56 && (black[0] & (onehot(s + 7) | onehot(s + 9)))) return true;
-		} else if (s > 7 && (white[0] & (onehot(s - 7) | onehot(s - 9)))) return true;
+			if (s < 56 && ((s&7) && (black[0] & onehot(s + 7)) | ((s&7 < 7) && (white[0] & onehot(s + 9))) )) return true;
+		} else if (s > 7 && ((s&7) && (white[0] & onehot(s - 9)) | ((s&7 < 7) && (white[0] & onehot(s - 7))) )) return true;
 		// knights
 		uint64_t knightField = knightBB[s];
 		if ((sta ? black : white)[1] & knightField) return true;
