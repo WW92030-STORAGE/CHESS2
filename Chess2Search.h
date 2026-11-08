@@ -17,8 +17,14 @@ struct SearchEngine {
 		return eval->evaluate(pos);
 	}
 
-	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int depth = 1) {
-		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int maxDepth = 1, int depth = 0) {
+		if (depth >= maxDepth) {
+			return {ChessMove(), evaluate(pos)};
+		}
+		if (pos.noLegalMoves()) {
+			if (pos.isInCheck()) return {ChessMove(), CHECKMT + depth};
+			return {ChessMove(), 0};
+		}
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
@@ -28,7 +34,7 @@ struct SearchEngine {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
-				auto p = mini(p2, depth - 1);
+				auto p = mini(p2, maxDepth, depth + 1);
 				if (p.second > maxScore) {
 					maxScore = p.second;
 					res = x;
@@ -38,8 +44,14 @@ struct SearchEngine {
 		return {res, maxScore};
 	} 
 
-	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1) {
-		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), -evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int maxDepth = 1, int depth = 0) {
+		if (depth >= maxDepth) {
+			return {ChessMove(), -evaluate(pos)};
+		}
+		if (pos.noLegalMoves()) {
+			if (pos.isInCheck()) return {ChessMove(), -CHECKMT - depth};
+			return {ChessMove(), 0};
+		}
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
@@ -49,7 +61,7 @@ struct SearchEngine {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
-				auto p = maxi(p2, depth - 1);
+				auto p = maxi(p2, maxDepth, depth + 1);
 				if (p.second < minScore) {
 					minScore = p.second;
 					res = x;
@@ -60,15 +72,21 @@ struct SearchEngine {
 	} 
 
 	virtual ChessMove search(ChessPosition& pos, int depth = 1) {
-		return maxi(pos, depth).first;
+		return maxi(pos, depth, 0).first;
 	}
 };
 
 struct AlphaBetaEngine : SearchEngine {
 	AlphaBetaEngine(Evaluation* e = 0) : SearchEngine(e) {  }
 
-	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
-		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int maxDepth = 1, int depth = 0, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
+		if (depth >= maxDepth) {
+			return {ChessMove(), evaluate(pos)};
+		}
+		if (pos.noLegalMoves()) {
+			if (pos.isInCheck()) return {ChessMove(), CHECKMT + depth};
+			return {ChessMove(), 0};
+		}
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
@@ -78,7 +96,7 @@ struct AlphaBetaEngine : SearchEngine {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
-				auto p = mini(p2, depth - 1, alpha, beta);
+				auto p = mini(p2, maxDepth, depth + 1, alpha, beta);
 				if (p.second > maxScore) {
 					maxScore = p.second;
 					res = x;
@@ -91,8 +109,14 @@ struct AlphaBetaEngine : SearchEngine {
 		return {res, maxScore};
 	} 
 
-	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
-		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), -evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int maxDepth = 1, int depth = 0, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
+		if (depth >= maxDepth) {
+			return {ChessMove(), -evaluate(pos)};
+		}
+		if (pos.noLegalMoves()) {
+			if (pos.isInCheck()) return {ChessMove(), -CHECKMT - depth};
+			return {ChessMove(), 0};
+		}
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
@@ -102,7 +126,7 @@ struct AlphaBetaEngine : SearchEngine {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
-				auto p = maxi(p2, depth - 1, alpha, beta);
+				auto p = maxi(p2, maxDepth, depth + 1, alpha, beta);
 				if (p.second < minScore) {
 					minScore = p.second;
 					res = x;

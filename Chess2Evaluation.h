@@ -11,6 +11,7 @@
 
 typedef int64_t eval_t;
 constexpr eval_t CH2_INF = (INT32_MAX>>1);
+constexpr eval_t CHECKMT = -(CH2_INF>>2);
 
 eval_t relu(eval_t v) {
 	return (v > 0) ? v : 0;
@@ -40,7 +41,7 @@ struct Evaluation {
 	}
 	virtual eval_t evaluate(ChessPosition& pos) {
 		if (pos.noLegalMoves() || pos.forcedStalemate()) {
-			if (pos.isInCheck()) return -(CH2_INF>>1);
+			if (pos.isInCheck()) return CHECKMT;
 			return 0;
 		}
 		eval_t res = evaluateSingleSide(pos, 1) - evaluateSingleSide(pos, 0);
