@@ -52,6 +52,18 @@ void printMovesWithEvals(ChessPosition& pos, Evaluation& eval, bool side = 0, in
 
 // BEGIN PLAYGAME
 
+/*
+
+To play the game:
+Your input consists of 4 numbers: c0, r0, c1, r1. cx is a file and rx is a rank, both 0-indexed. (c, r)0 is source and (c, r)1 is destination.
+This is the normal operation: there are two exceptions:
+- If c0 == -1 then all possible legal moves for your side will be displayed in text form, formatted into r0 columns.
+- If c0 == -2 then the same happens but only for moves starting on the square (c1, r1).
+Only the normal operation flips sides after a move. Undoing is not supported in these minimal examples.
+
+*/
+
+// Play a game, no fancy business
 void playGame() {
 	ChessPosition pos;
 	pos.init();
@@ -89,6 +101,7 @@ void playGame() {
 	}
 }
 
+// Play a game, show evaluations of the current state (and legal moves if desired) according to a chosen evaluation scheme.
 void playGameWithEvaluation(Evaluation& eval) {
 	ChessPosition pos;
 	pos.init();
@@ -127,7 +140,8 @@ void playGameWithEvaluation(Evaluation& eval) {
 	}
 }
 
-void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1) {
+// Play a game against an engine. By default you play as white (and engine as black).
+void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1, int depth = 5) {
 	ChessPosition pos;
 	pos.init();
 	while (true) {
@@ -138,7 +152,7 @@ void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1) {
 		}
 		ChessMove move;
 		if (pos.sideToMove() == enginePlaysAs) {
-			move = engine.search(pos, 3);
+			move = engine.search(pos, depth);
 			std::cout << "Chosen move: " << move.to_string() << "\n";
 		} else {
 			int r0, r1, c0, c1;

@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	Turochamp eval;
-	SearchEngine mmSearch{&eval};
+	AlphaBetaEngine mmSearch{&eval};
 	playAgainstEngine(mmSearch);
 	return 0;
 }

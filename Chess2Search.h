@@ -57,4 +57,52 @@ struct SearchEngine {
 	}
 };
 
+struct AlphaBetaEngine : SearchEngine {
+	AlphaBetaEngine(Evaluation* e = 0) : SearchEngine(e) {  }
+
+	std::pair<ChessMove, float> maxi(ChessPosition& pos, int depth = 1, float alpha = -CH2_INF, float beta = CH2_INF) {
+		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+		ChessMove res;
+		float maxScore = -CH2_INF;
+		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			ChessPosition p2 = pos;
+			if (p2.apply(x)) {
+				p2.setSTM(!p2.sideToMove());
+				auto p = mini(p2, depth - 1, alpha, beta);
+				if (p.second > maxScore) {
+					maxScore = p.second;
+					res = x;
+					if (p.second > alpha) alpha = p.second;
+				}
+				if (p.second > beta) break;
+			}
+		}
+		return {res, maxScore};
+	} 
+
+	std::pair<ChessMove, float> mini(ChessPosition& pos, int depth = 1, float alpha = -CH2_INF, float beta = CH2_INF) {
+		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+		ChessMove res;
+		float minScore = CH2_INF;
+		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			ChessPosition p2 = pos;
+			if (p2.apply(x)) {
+				p2.setSTM(!p2.sideToMove());
+				auto p = maxi(p2, depth - 1, alpha, beta);
+				if (p.second < minScore) {
+					minScore = p.second;
+					res = x;
+					if (p.second < beta) beta = p.second;
+				}
+				if (p.second < alpha) break;
+			}
+		}
+		return {res, minScore};
+	} 
+
+	virtual ChessMove search(ChessPosition& pos, int depth = 1) {
+		return maxi(pos, depth).first;
+	}
+};
+
 #endif
