@@ -22,7 +22,6 @@ struct ChessMove {
 	inline bool enPassant() { return flags() == 5; }
 	inline void setFlags(uint8_t x) { move = (move & ((1<<12) - 1)) | (x<<12); }
 	inline bool castle() { return move == 2 || move == 3; }
-	uint16_t counter = 0;
 
 	ChessMove() { }
 	ChessMove(int8_t s, int8_t d, uint8_t flags) { move = (uint16_t)(s) | ((uint16_t)(d)<<6) | ((uint16_t)(flags)<<12); }
@@ -48,6 +47,8 @@ struct ChessPosition {
 	uint64_t black[6] = {0, 0, 0, 0, 0, 0};
 	uint64_t white[6] = {0, 0, 0, 0, 0, 0};
 	ChessMove lastMove;
+	ChessMove lastMove2;
+	uint16_t hmc = 0;
 
 	// x, x, x, black right castle, black left castle, white right castle, white left castle, side to move
 	uint8_t data = BRCASTLE | BLCASTLE | WRCASTLE | WLCASTLE;
@@ -60,6 +61,7 @@ struct ChessPosition {
 		for (int i = 0; i < 6; i++) black[i] = white[i] = 0;
 		data = BRCASTLE | BLCASTLE | WRCASTLE | WLCASTLE;
 		lastMove.move = 0;
+		lastMove2.move = 0;
 	}
 
 	void init() {
@@ -269,6 +271,10 @@ struct ChessPosition {
 		return isInCheck() && noLegalMoves();
 	}
 
+	bool forcedStalemate() {
+		return hmc >= 75;
+	}
+
 	bool canCastle() {
 		return data & (sideToMove() ? (BRCASTLE | BLCASTLE) : (WRCASTLE | WLCASTLE));
 	}
@@ -391,9 +397,11 @@ struct ChessPosition {
 		uint64_t dSquare = onehot(d);
 		int8_t sPiece = -1;
 		int8_t dPiece = -1;
+		bool pawnMoved = false;
 		for (int i = 0; i < 6; i++) {
 			uint64_t blob = (stm ? black : white)[i];
 			if (blob & sSquare) {
+				if (i == 0) pawnMoved = true;
 				sPiece = i;
 				break;
 			}
@@ -434,17 +442,22 @@ struct ChessPosition {
 		}
 
 		// set flags
+		lastMove2 = lastMove;
 		lastMove = move;
 		if (s == 0 || d == 0 || s == 4 || d == 4) data &= ~(WLCASTLE);
 		if (s == 7 || d == 7 || s == 4 || d == 4) data &= ~(WRCASTLE);
 		if (s == 56 || d == 56 || s == 60 || d == 60) data &= ~(BLCASTLE);
 		if (s == 63 || d == 63 || s == 60 || d == 60) data &= ~(BRCASTLE);
 
+		// update counter
+		if (pawnMoved || move.capture()) hmc = 0;
+		else hmc++;
+
 		return 1;
 	}
 
 	std::string to_string() {
-		std::string res = "ChessPosition[" + u8tos(data) + ", " + lastMove.to_string() + "]";
+		std::string res = "ChessPosition[" + u8tos(data) + ", " + lastMove.to_string() + ", hmc=" + std::to_string(hmc) + "]";
 		for (int r = 8; r--; ) {
 			res.push_back('\n');
 			for (int c = 0; c < 8; c++) {

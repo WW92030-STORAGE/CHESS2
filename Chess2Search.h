@@ -16,10 +16,10 @@ struct SearchEngine {
 		return eval->evaluate(pos);
 	}
 
-	std::pair<ChessMove, float> maxi(ChessPosition& pos, int depth = 1) {
+	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int depth = 1) {
 		if (depth <= 0) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
-		float maxScore = -CH2_INF;
+		eval_t maxScore = -CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
@@ -34,10 +34,10 @@ struct SearchEngine {
 		return {res, maxScore};
 	} 
 
-	std::pair<ChessMove, float> mini(ChessPosition& pos, int depth = 1) {
-		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1) {
+		if (depth <= 0) return {ChessMove(), -evaluate(pos)};
 		ChessMove res;
-		float minScore = CH2_INF;
+		eval_t minScore = CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
@@ -60,11 +60,12 @@ struct SearchEngine {
 struct AlphaBetaEngine : SearchEngine {
 	AlphaBetaEngine(Evaluation* e = 0) : SearchEngine(e) {  }
 
-	std::pair<ChessMove, float> maxi(ChessPosition& pos, int depth = 1, float alpha = -CH2_INF, float beta = CH2_INF) {
+	virtual std::pair<ChessMove, eval_t> maxi(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
 		if (depth <= 0) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
-		float maxScore = -CH2_INF;
+		eval_t maxScore = -CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
@@ -74,17 +75,19 @@ struct AlphaBetaEngine : SearchEngine {
 					res = x;
 					if (p.second > alpha) alpha = p.second;
 				}
-				if (p.second > beta) break;
+				if (p.second >= beta) break;
 			}
 		}
+		// cout << "depth " << depth << " max: " << maxScore << " " << res.to_string() << " [" << pos.possibleLegalMoves(pos.sideToMove()).size() << "]\n";
 		return {res, maxScore};
 	} 
 
-	std::pair<ChessMove, float> mini(ChessPosition& pos, int depth = 1, float alpha = -CH2_INF, float beta = CH2_INF) {
-		if (depth <= 0) return {ChessMove(), evaluate(pos)};
+	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
+		if (depth <= 0) return {ChessMove(), -evaluate(pos)};
 		ChessMove res;
-		float minScore = CH2_INF;
+		eval_t minScore = CH2_INF;
 		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
 				p2.setSTM(!p2.sideToMove());
@@ -94,9 +97,10 @@ struct AlphaBetaEngine : SearchEngine {
 					res = x;
 					if (p.second < beta) beta = p.second;
 				}
-				if (p.second < alpha) break;
+				if (p.second <= alpha) break;
 			}
 		}
+		// cout << "depth " << depth << " min: " << minScore << " " << res.to_string() << " [" << pos.possibleLegalMoves(pos.sideToMove()).size() << "]\n";
 		return {res, minScore};
 	} 
 

@@ -33,15 +33,15 @@ void printMovesBySquare(ChessPosition& pos, bool side = 0, int cols = 3, uint8_t
 	if (ctr % cols) std::cout << "\n";
 }
 
-void printMovesWithEvals(ChessPosition& pos, Evaluation& eval, bool side = 0, int cols = 3) {
+void printMovesWithEvals(ChessPosition& pos, Evaluation& eval, int cols = 3) {
 	if (cols < 0) cols = 1;
+	bool side = pos.sideToMove();
 	std::vector<ChessMove> pm = pos.possibleLegalMoves(side);
 	std::cout << (side ? "Black" : "White") << " possible moves: [" << std::to_string(pm.size()) << "]\n";
 	int ctr = 0;
 	for (auto x : pm) {
 		ChessPosition newPos = pos;
 		newPos.apply(x);
-		newPos.setSTM(!newPos.sideToMove());
 		cout << x.to_string() << ":" << eval(newPos) << " ";
 		if (++ctr % cols == 0) std::cout << "\n";
 	}
@@ -71,6 +71,9 @@ void playGame() {
 		std::cout << pos.to_string() << "\n";
 		if (pos.checkmated()) {
 			cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
+			break;
+		} else if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			cout << "STALEMATE - Game end\n";
 			break;
 		}
 		int r0, r1, c0, c1;
@@ -111,11 +114,14 @@ void playGameWithEvaluation(Evaluation& eval) {
 		if (pos.checkmated()) {
 			cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
 			break;
+		} else if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			cout << "STALEMATE - Game end\n";
+			break;
 		}
 		int r0, r1, c0, c1;
 		std::cin >> c0 >> r0 >> c1 >> r1;
 		if (c0 == -1) {
-			printMovesWithEvals(pos, eval, pos.sideToMove(), std::max(r0, 1));
+			printMovesWithEvals(pos, eval, std::max(r0, 1));
 			continue;
 		}
 		if (c0 == -2) {
@@ -141,13 +147,16 @@ void playGameWithEvaluation(Evaluation& eval) {
 }
 
 // Play a game against an engine. By default you play as white (and engine as black).
-void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1, int depth = 5) {
+void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1, int depth = 4) {
 	ChessPosition pos;
 	pos.init();
 	while (true) {
-		std::cout << pos.to_string() << "\n";
+		std::cout << pos.to_string() << "\nEVAL: " << engine.eval->evaluate(pos) << "\n";
 		if (pos.checkmated()) {
 			cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
+			break;
+		} else if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			cout << "STALEMATE - Game end\n";
 			break;
 		}
 		ChessMove move;
@@ -178,6 +187,31 @@ void playAgainstEngine(SearchEngine& engine, bool enginePlaysAs = 1, int depth =
 				move.move |= xx<<12;
 			}
 		}
+		if (pos.apply(move)) pos.setSTM(!pos.sideToMove());
+		else {
+			std::cout << "Error move\n";
+			break;
+		}
+		continue;
+	}
+}
+
+void EngineOnEngine(SearchEngine& white, SearchEngine& black, int wd = 4, int bd = 4) {
+	ChessPosition pos;
+	pos.init();
+	while (true) {
+		std::cout << pos.to_string() << "\nEVAL(" << pos.sideToMove() << "): " << (pos.sideToMove() ? black : white).eval->evaluate(pos) << "\n";
+		if (pos.checkmated()) {
+			cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
+			break;
+		} else if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			cout << "STALEMATE - Game end\n";
+			break;
+		}
+		// printMovesWithEvals(pos, *((pos.sideToMove() ? black : white).eval), 3);
+		ChessMove move;
+		move = (pos.sideToMove() ? black : white).search(pos, pos.sideToMove() ? bd : wd);
+		std::cout << "Chosen move: " << move.to_string() << "\n"; 
 		if (pos.apply(move)) pos.setSTM(!pos.sideToMove());
 		else {
 			std::cout << "Error move\n";

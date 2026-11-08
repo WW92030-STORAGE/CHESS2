@@ -8,6 +8,8 @@ using namespace std;
 int main() {
 	Turochamp eval;
 	AlphaBetaEngine mmSearch{&eval};
-	playAgainstEngine(mmSearch);
+	AlphaBetaEngine noobSearch{&eval};
+	// playAgainstEngine(mmSearch, 1, 4);
+	EngineOnEngine(mmSearch, mmSearch, 2, 2);
 	return 0;
 }

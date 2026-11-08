@@ -32,7 +32,7 @@ if (pos2.isLegalMove(move)) // Checks if the move is legal, also sets flags if n
 - Evaluation class:
 ```
 Evaluation eval;
-std::cout << eval(pos); // operator() or the evaluate() method returns the evaluation as a float
+std::cout << eval(pos); // operator() or the evaluate() method returns the evaluation as an integer
 ```
 - Engine:
 ```

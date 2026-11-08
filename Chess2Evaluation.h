@@ -9,45 +9,58 @@
 
 // Evaluation function
 
-constexpr float CH2_INF = 1.0e12;
+typedef int64_t eval_t;
+constexpr eval_t CH2_INF = (INT32_MAX>>1);
 
-// This is the purest form of an evaluation system. Subclasses can derive the evaluation function.
-// WARNING - All evaluations evaluate in absolute terms. If black holds an advantage then the evaluation scores high, otherwise the evaluation scores low.
+eval_t relu(eval_t v) {
+	return (v > 0) ? v : 0;
+}
+
+
+// This is the purest form of an evaluation system. Subclasses can derive the evaluation (more specifically, eval) function.
+// WARNING - All evaluations evaluate relative -- if the evaluation is high then sideToMove() has an advantage, if low then !sideToMove() has the advantage.
 struct Evaluation {
 	// simple evaluation system based on material, checks, and checkmates
 
 	// evaluateSingleSide computes evaluation of a single side. This function may or may not correspond exactly to the evaluate method (e.g. evaluation = ess(1) - ess(0))
-	virtual float evaluateSingleSide(ChessPosition& pos, bool stm) {
+	virtual eval_t evaluateSingleSide(ChessPosition& pos, bool stm) {
 		bool originalSTM = pos.sideToMove();
 		pos.setSTM(stm);
-		if (pos.checkmated()) return stm ? -CH2_INF : CH2_INF;
-		float res = 0;
-		const int weights[5] = {1, 3, 3, 5, 9};
+		if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			if (pos.isInCheck()) return -(CH2_INF>>2);
+			return -(CH2_INF>>3);
+		}
+		eval_t res = 0;
+		const int weights[5] = {100, 300, 300, 500, 900}; // everything is scaled up by 100 to adhere to the centipawns metric
 		for (int i = 0; i < 5; i++) {
 			res += weights[i] * popCount((stm ? pos.black : pos.white)[i]);
 		}
 		if (pos.isInCheck()) {
-			if (res > 0) res *= 0.5;
-			else res *= 1.5;
+			if (res > 0) res>>=1;
+			else res = res + (res>>1);
 		}
 		pos.setSTM(originalSTM);
 		return res;
 	}
-	virtual float evaluate(ChessPosition& pos) {
-		return evaluateSingleSide(pos, 1) - evaluateSingleSide(pos, 0);
+	virtual eval_t evaluate(ChessPosition& pos) {
+		eval_t res = evaluateSingleSide(pos, 1) - evaluateSingleSide(pos, 0);
+		if (!pos.sideToMove()) res = -res;
+		return res - pos.hmc * pos.hmc;
 	}
 
-	float operator()(ChessPosition& pos) { return evaluate(pos); }
+	eval_t operator()(ChessPosition& pos) { return evaluate(pos); }
 };
 
 struct Turochamp : Evaluation {
 	// Turing-Champernowne method, with some slight variaions
-	virtual float evaluateSingleSide(ChessPosition& pos, bool stm) {
+	virtual eval_t evaluateSingleSide(ChessPosition& pos, bool stm) {
 		bool originalSTM = pos.sideToMove();
 		pos.setSTM(stm);
-		if (pos.checkmated()) return stm ? -CH2_INF : CH2_INF;
-		float res = -pos.isInCheck();
-		const float weights[5] = {1, 3, 3.5, 5, 10};
+		if (pos.noLegalMoves() || pos.forcedStalemate()) {
+			if (pos.isInCheck()) return -(CH2_INF>>2);
+			return -(CH2_INF>>3);
+		}
+		eval_t res = 0;
 
 		// 1. add square root of number of moves per piece except kings and pawns
 		uint64_t rbn = stm ? (pos.black[1] | pos.black[2] | pos.black[3]) : (pos.white[1] | pos.white[2] | pos.white[3]);
@@ -58,27 +71,27 @@ struct Turochamp : Evaluation {
 		for (int i = 0; i < 64; i++) {
 			uint64_t sq = onehot(i);
 			if (sq & notKPs) {
-				int ctr = 0;
+				eval_t ctr = 0;
 				for (auto i : pos.possibleLegalMovesPerSquare(stm, i)) ctr += i.capture() ? 2 : 1;
-				res += sqrtf(ctr);
+				res += sqrtf(10000 * ctr);
 
 				if (sq & rbn) {
-					int8_t defending = popCount(pos.isAttackedBy(i, stm));
-					if (defending) res += 1 + defending * 0.5;
+					eval_t defending = popCount(pos.isAttackedBy(i, stm));
+					if (defending) res += 100 + 50 * defending;
 				}
 			}
 			if (sq & king) {
 				std::vector<ChessMove> nocastle;
-				int ctr = 0;
-				bool castleImmediatelyEligible = 0;
+				eval_t ctr = 0;
+				bool castleImmediatelyEligible = pos.lastMove2.castle();
 				for (auto i : pos.possibleLegalMovesPerSquare(stm, i)) {
 					if (!i.castle()) ctr += i.capture() ? 2 : 1;
 					else castleImmediatelyEligible = 1;
 				}
-				res += sqrtf(ctr);
+				res += sqrtf(10000 * ctr);
 
 				// castling rules
-				if (pos.canCastle()) res += castleImmediatelyEligible;
+				if (pos.canCastle()) res += (castleImmediatelyEligible ? 100 : 0);
 
 				// king safety
 				int8_t diff = (i>>3) - (i & 7);
@@ -86,16 +99,76 @@ struct Turochamp : Evaluation {
 				uint64_t diagonals = rayAttack(diagonalBB(diff), allPieces, i, 0) | rayAttack(diagonalBB(diff), allPieces, i, 1) | rayAttack(bisectorBB[sum], allPieces, i, 0) | rayAttack(bisectorBB[sum], allPieces, i, 1);
 				uint64_t orthos = rayAttack(rankBB[i>>3], allPieces, i, 0)| rayAttack(rankBB[i>>3], allPieces, i, 1) | rayAttack(fileBB[i & 7], allPieces, i, 0) | rayAttack(fileBB[i & 7], allPieces, i, 1);
 				res -= popCount(diagonals | orthos);
+			} if (sq & pawns) {
+				res += (bool(pos.isAttackedBy(i, stm) & (notKPs | king)) ? 30 : 0);
 			}
 		}
 
 		// evaluate pawns by rank
 		for (int8_t i = 2; i < 7; i++) {
 			int8_t r = stm ? 7 - i : i;
-			res += 0.2 * (i - 1) * popCount(rankBB[r] & pawns);
+			res += 20 * (i - 1) * popCount(rankBB[r] & pawns);
 		}
+
+		if (pos.isInCheck()) {
+			if (res > 0) res>>=1;
+			else res = res + (res>>1);
+		}
+
 		pos.setSTM(originalSTM);
 		return res;
+	}
+};
+
+// Individual pieces and values. A Neural evaluation function has a 2D array of weights that can be scanned through.
+struct NNUE : Evaluation {
+	std::vector<std::vector<uint8_t>> hiddenWeights; // This is the thing that will be iterated on in the training program
+	std::vector<uint8_t> outputWeights; // Weights of strictly the final layer
+	std::vector<uint64_t> bitmasks; // These will store the six white and then six black bitmasks
+
+	// accums
+	int ACCUM_SIZE = 64 * 4;
+	std::vector<eval_t> accum[2];
+
+	NNUE(int AC = 64 * 4) {
+		ACCUM_SIZE = AC;
+		bitmasks = std::vector<uint64_t>(12, 0);
+		hiddenWeights = std::vector<std::vector<uint8_t>>(64 * 12 + 1, std::vector<uint8_t>(ACCUM_SIZE, 0));
+		outputWeights = std::vector<uint8_t>(ACCUM_SIZE + 1, 0);
+		for (int i = 0; i < 2; i++) accum[i] = std::vector<eval_t>(ACCUM_SIZE, 0);
+		// The last row in each vector is the bias and will be directly added to everything. In particular, the last row of hiddenWeights are the accum biases and will be added to the accumulators before performing ReLU and whatnot.
+	}
+
+	// For this neural network 
+	eval_t eval(ChessPosition& pos, bool stm) {
+		// side * 64 * 6 + pieceType * 64 + square
+		std::vector<uint64_t> incoming(12);
+		std::vector<uint64_t> off(12);
+		std::vector<uint64_t> on(12);
+		for (int i = 0; i < 6; i++) {
+			incoming[i] = (stm ? pos.white : pos.black)[i];
+			incoming[i + 6] = (stm ? pos.black : pos.white)[i];
+		}
+		for (int i = 0; i < 12; i++) {
+			off[i] = (~incoming[i]) & bitmasks[i];
+			on[i] = incoming[i] & (~bitmasks[i]);
+		}
+
+		for (int i = 0; i < 64 * 12; i++) {
+			uint64_t square = onehot(i & 63);
+			uint64_t no = (i>>6);
+			bool side = no >= 6;
+
+			if (on[no] & square) {
+				for (int j = 0; j < ACCUM_SIZE; j++) {
+					accum[side][j] += hiddenWeights[i][j];
+				}
+			}
+			if (off[no] & square) {
+
+			}
+		}
+		return 0;
 	}
 };
 
