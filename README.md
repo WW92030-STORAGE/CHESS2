@@ -1,6 +1,6 @@
 # chess2
 
-Chess engine using Bitboards instead of the mailbox (array of chess piece entities e.g. `uint8_t`) that I did previously. Most of this comes from various articles on ChessProgramming wiki (CPW).
+Chess engine using Bitboards instead of the mailbox (array of chess piece entities e.g. `uint8_t`) that I did previously. Various concepts are based on various articles on ChessProgramming wiki (CPW).
 
 # WHAT IS A BITBOARD
 
