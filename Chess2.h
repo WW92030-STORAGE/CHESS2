@@ -190,7 +190,7 @@ struct ChessPosition {
 					}
 				}
 			} else {
-				if (d > 56) move.move |= PROMOTION;
+				if (d >= 56) move.move |= PROMOTION;
 				if (sSquare & rankBB[7]) return false;
 				bool intermediateActive = allPieces & onehot(s + 8);
 				if (d == s + 8 && !intermediateActive) return true;
