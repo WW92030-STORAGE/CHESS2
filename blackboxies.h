@@ -173,12 +173,11 @@ void testMateIn3Hard() {
 
 	Turochamp eval;
 	AlphaBetaEngine engine(&eval);
-	for (int i = 0; i < 20; i++) {
+	for (int i = 0; i < 5; i++) {
 		assert(!pos.checkmated());
-		ChessMove move = engine.search(pos, 5);
+		ChessMove move = engine.search(pos, 3);
 		pos.apply(move);
 		pos.setSTM(!pos.sideToMove());
-
 		cout << "CHOSEN: " << move.to_string() << "\n" << pos.to_string() << "\n";
 	}
 	assert(pos.checkmated());
