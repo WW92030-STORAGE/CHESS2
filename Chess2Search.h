@@ -21,7 +21,9 @@ struct SearchEngine {
 		if (depth <= 0) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
-		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
+		std::random_shuffle(moves.begin(), moves.end());
+		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
@@ -37,10 +39,12 @@ struct SearchEngine {
 	} 
 
 	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1) {
-		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
+		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), -evaluate(pos)};
 		ChessMove res;
 		eval_t minScore = CH2_INF;
-		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
+		std::random_shuffle(moves.begin(), moves.end());
+		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
@@ -67,7 +71,9 @@ struct AlphaBetaEngine : SearchEngine {
 		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
-		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
+		std::random_shuffle(moves.begin(), moves.end());
+		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
@@ -86,10 +92,12 @@ struct AlphaBetaEngine : SearchEngine {
 	} 
 
 	virtual std::pair<ChessMove, eval_t> mini(ChessPosition& pos, int depth = 1, eval_t alpha = -CH2_INF, eval_t beta = CH2_INF) {
-		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), evaluate(pos)};
+		if (depth <= 0 || pos.noLegalMoves()) return {ChessMove(), -evaluate(pos)};
 		ChessMove res;
 		eval_t minScore = CH2_INF;
-		for (ChessMove x : pos.possibleLegalMoves(pos.sideToMove())) {
+		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
+		std::random_shuffle(moves.begin(), moves.end());
+		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
 			if (p2.apply(x)) {
