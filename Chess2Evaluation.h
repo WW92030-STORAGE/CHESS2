@@ -123,7 +123,7 @@ struct Turochamp : Evaluation {
 // Individual pieces and values. A Neural evaluation function has a 2D array of weights that can be scanned through.
 struct NNUE : Evaluation {
 	static const int INPUT_SIZE = 64 * 12;
-	static const int ACCUM_SIZE = 64 * 4; // Feel free to change this
+	static const int ACCUM_SIZE = 64; // Feel free to change this
 	std::vector<std::vector<int8_t>> hiddenWeights; // This is the thing that will be iterated on in the training program
 	std::vector<int8_t> outputWeights; // Weights of strictly the final layer
 	std::vector<uint64_t> bitmasks; // These will store the six white and then six black bitmasks
@@ -154,6 +154,8 @@ struct NNUE : Evaluation {
 			off[i] = (~incoming[i]) & bitmasks[i];
 			on[i] = incoming[i] & (~bitmasks[i]);
 		}
+
+		for (int i = 0; i < 12; i++) bitmasks[i] = incoming[i];
 
 		for (int i = 0; i < INPUT_SIZE; i++) {
 			uint64_t square = onehot(i & 63);

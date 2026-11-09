@@ -80,6 +80,9 @@ std::vector<NNUE> breedNNUE(int N = 16, int iters = 4, int games = 4, int depth 
 			}
 		}
 		std::cout << std::endl;
+		std::cout << "SCORE: ";
+		for (int i = 0; i < 8; i++) std::cout << "[" << i << ": " << scores[i] << "]";
+		std::cout << std::endl;
 		
 		// end testing
 		std::vector<std::pair<int, NNUE>> toSort(N);

@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
 	int DEPTH = 2;
-	auto nnue = breedNNUE(16, 8, 4, DEPTH);
+	auto nnue = breedNNUE(8, 8, 4, DEPTH);
 	ofstream fout("nnue.txt");
 	fout << "int DEPTH = " << DEPTH << "\n";
 	fout << nnue[0].formatHiddenWeights() << "\n" << nnue[0].formatOutputWeights() << "\n";
