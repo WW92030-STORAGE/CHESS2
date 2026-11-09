@@ -1,6 +1,8 @@
 #ifndef CHESS2_UTILS_H_NORMALEXISTING
 #define CHESS2_UTILS_H_NORMALEXISTING
 
+#include <random>
+
 constexpr uint8_t WHITE = 1<<0;
 constexpr uint8_t BLACK = 1<<1;
 constexpr uint8_t PAWN = 1<<2;
@@ -18,6 +20,11 @@ constexpr uint8_t WLCASTLE = 1<<1;
 constexpr uint8_t WRCASTLE = 1<<2;
 constexpr uint8_t BLCASTLE = 1<<3;
 constexpr uint8_t BRCASTLE = 1<<4;
+
+std::mt19937 CH2_PRNG(0);
+std::uniform_real_distribution<float> rand01(0, 1);
+std::uniform_int_distribution<int> randBool(0, 1);
+std::uniform_int_distribution<int> randByte(0, 255);
 
 // BEGIN GENERAL BIT THINGS
 

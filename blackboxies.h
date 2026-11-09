@@ -215,4 +215,15 @@ void testMateIn3Hard2() {
 	assert(pos.checkmated());
 }
 
+void runSimulation() {
+	Turochamp tcEval;
+	Evaluation noobEval;
+	NNUE nn1 = randomNNUE();
+	NNUE nn2 = randomNNUE();
+	AlphaBetaEngine mmSearch{&nn1};
+	AlphaBetaEngine noobSearch{&nn2};
+	// playAgainstEngine(mmSearch, 1, 4);
+	EngineOnEngine(mmSearch, noobSearch, 2, 2);
+}
+
 #endif

@@ -4,17 +4,19 @@ using namespace std;
 #include "Chess2GameUtils.h"
 #include "Chess2Search.h"
 #include "blackboxies.h"
+#include "Chess2Training.h"
 
 int main() {
-	// testMateIn3();
-	testMateIn3Hard();
-	return 0;
+	int DEPTH = 2;
+	auto nnue = breedNNUE(16, 8, 4, DEPTH);
+	ofstream fout("nnue.txt");
+	fout << "int DEPTH = " << DEPTH << "\n";
+	fout << nnue[0].formatHiddenWeights() << "\n" << nnue[0].formatOutputWeights() << "\n";
+	fout << nnue[1].formatHiddenWeights() << "\n" << nnue[1].formatOutputWeights() << "\n";
 
-	Turochamp tcEval;
-	Evaluation noobEval;
-	AlphaBetaEngine mmSearch{&tcEval};
-	AlphaBetaEngine noobSearch{&noobEval};
-	// playAgainstEngine(mmSearch, 1, 4);
-	EngineOnEngine(mmSearch, noobSearch, 4, 3);
+	fout.close();
+
+	std::cout << "File closed\n";
+
 	return 0;
 }

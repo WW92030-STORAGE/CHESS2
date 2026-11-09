@@ -28,7 +28,7 @@ struct SearchEngine {
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
-		std::random_shuffle(moves.begin(), moves.end());
+		std::shuffle(moves.begin(), moves.end(), CH2_PRNG);
 		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
@@ -55,7 +55,7 @@ struct SearchEngine {
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
-		std::random_shuffle(moves.begin(), moves.end());
+		std::shuffle(moves.begin(), moves.end(), CH2_PRNG);
 		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
@@ -90,7 +90,7 @@ struct AlphaBetaEngine : SearchEngine {
 		ChessMove res;
 		eval_t maxScore = -CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
-		std::random_shuffle(moves.begin(), moves.end());
+		std::shuffle(moves.begin(), moves.end(), CH2_PRNG);
 		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
@@ -120,7 +120,7 @@ struct AlphaBetaEngine : SearchEngine {
 		ChessMove res;
 		eval_t minScore = CH2_INF;
 		std::vector<ChessMove> moves = pos.possibleLegalMoves(pos.sideToMove());
-		std::random_shuffle(moves.begin(), moves.end());
+		std::shuffle(moves.begin(), moves.end(), CH2_PRNG);
 		for (ChessMove x : moves) {
 			if (!res.move) res = x;
 			ChessPosition p2 = pos;
