@@ -29,7 +29,7 @@ void trainPST() {
 	int N = 16;
 	int ITERS = 16;
 	int GAMES = 8;
-	int DEPTH = 4;
+	int DEPTH = 2;
 	auto nnue = breedPST(N, ITERS, GAMES, DEPTH); 
 	ofstream fout("pst_" + std::to_string(N) + "_" + std::to_string(ITERS) + "_" + std::to_string(GAMES) + "_" + std::to_string(DEPTH) + ".txt");
 	fout << "int DEPTH = " << DEPTH << "\n";
