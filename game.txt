@@ -1,0 +1,3038 @@
+g++ main.cpp -o main -O3
+./main
+ChessPosition[00011110, NIL, hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP BP BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+WP WP WP WP WP WP WP WP 
+WR WN WB WQ WK WB WN WR 
+EVAL(0): 258005
+Chosen move: ChessMove[h2 > h4: [P: 0, C: 0, F: 01]]
+ChessPosition[00011111, ChessMove[h2 > h4: [P: 0, C: 0, F: 01]], hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP BP BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP WP WP WP WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(1): -259155
+Chosen move: ChessMove[e7 > e5: [P: 0, C: 0, F: 01]]
+ChessPosition[00011110, ChessMove[e7 > e5: [P: 0, C: 0, F: 01]], hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP .. .. .. 
+.. .. .. .. .. .. .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP WP WP WP WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(0): 203884
+Chosen move: ChessMove[f2 > f4: [P: 0, C: 0, F: 01]]
+ChessPosition[00011111, ChessMove[f2 > f4: [P: 0, C: 0, F: 01]], hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP .. .. .. 
+.. .. .. .. .. WP .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP WP WP .. WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(1): -204427
+Chosen move: ChessMove[e5 > e4: [P: 0, C: 0, F: 00]]
+ChessPosition[00011110, ChessMove[e5 > e4: [P: 0, C: 0, F: 00]], hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP WP .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP WP WP .. WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(0): 171006
+Chosen move: ChessMove[d2 > d3: [P: 0, C: 0, F: 00]]
+ChessPosition[00011111, ChessMove[d2 > d3: [P: 0, C: 0, F: 00]], hmc=0]
+BR BN BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP WP .. WP 
+.. .. .. WP .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(1): -171023
+Chosen move: ChessMove[b8 > a6: [P: 0, C: 0, F: 00]]
+ChessPosition[00011110, ChessMove[b8 > a6: [P: 0, C: 0, F: 00]], hmc=1]
+BR .. BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP WP .. WP 
+.. .. .. WP .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN WB WQ WK WB WN WR 
+EVAL(0): 129659
+Chosen move: ChessMove[c1 > e3: [P: 0, C: 0, F: 00]]
+ChessPosition[00011111, ChessMove[c1 > e3: [P: 0, C: 0, F: 00]], hmc=2]
+BR .. BB BQ BK BB BN BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP WP .. WP 
+.. .. .. WP WB .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(1): -130112
+Chosen move: ChessMove[g8 > f6: [P: 0, C: 0, F: 00]]
+ChessPosition[00011110, ChessMove[g8 > f6: [P: 0, C: 0, F: 00]], hmc=3]
+BR .. BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. BN .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BP WP .. WP 
+.. .. .. WP WB .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(0): 34397
+Chosen move: ChessMove[d3 > e4: [P: 0, C: 1, F: 00]]
+ChessPosition[00011111, ChessMove[d3 > e4: [P: 0, C: 1, F: 00]], hmc=0]
+BR .. BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. BN .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. .. WB .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(1): -53176
+Chosen move: ChessMove[a8 > b8: [P: 0, C: 0, F: 00]]
+ChessPosition[00010110, ChessMove[a8 > b8: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. BN .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. .. WB .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(0): 13508
+Chosen move: ChessMove[e3 > c5: [P: 0, C: 0, F: 00]]
+ChessPosition[00010111, ChessMove[e3 > c5: [P: 0, C: 0, F: 00]], hmc=2]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+BN .. .. .. .. BN .. .. 
+.. .. WB .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(1): -13402
+Chosen move: ChessMove[a6 > c5: [P: 0, C: 1, F: 00]]
+ChessPosition[00010110, ChessMove[a6 > c5: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. BN .. .. 
+.. .. BN .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. WQ WK WB WN WR 
+EVAL(0): 59870
+Chosen move: ChessMove[d1 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00010111, ChessMove[d1 > d5: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. BN .. .. 
+.. .. BN WQ .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. .. .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. .. WK WB WN WR 
+EVAL(1): -60505
+Chosen move: ChessMove[c5 > d3: [P: 0, C: 0, F: 00]]
+ChessPosition[00010110, ChessMove[c5 > d3: [P: 0, C: 0, F: 00]], hmc=2]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. BN .. .. 
+.. .. .. WQ .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. BN .. .. .. .. 
+WP WP WP .. WP .. WP .. 
+WR WN .. .. WK WB WN WR 
+EVAL(0): 45689
+Chosen move: ChessMove[e1 > d2: [P: 0, C: 0, F: 00]]
+ChessPosition[00010001, ChessMove[e1 > d2: [P: 0, C: 0, F: 00]], hmc=3]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. BN .. .. 
+.. .. .. WQ .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. BN .. .. .. .. 
+WP WP WP WK WP .. WP .. 
+WR WN .. .. .. WB WN WR 
+EVAL(1): -45932
+Chosen move: ChessMove[f6 > d5: [P: 0, C: 1, F: 00]]
+ChessPosition[00010000, ChessMove[f6 > d5: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. BN .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. .. BN .. .. .. .. 
+WP WP WP WK WP .. WP .. 
+WR WN .. .. .. WB WN WR 
+EVAL(0): 87046
+Chosen move: ChessMove[c2 > c3: [P: 0, C: 0, F: 00]]
+ChessPosition[00010001, ChessMove[c2 > c3: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR BB BQ BK BB .. BR 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. BN .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP BN .. .. .. .. 
+WP WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN WR 
+EVAL(1): -87405
+Chosen move: ChessMove[h8 > g8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h8 > g8: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. BN .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP BN .. .. .. .. 
+WP WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN WR 
+EVAL(0): 47663
+Chosen move: ChessMove[h1 > h3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[h1 > h3: [P: 0, C: 0, F: 00]], hmc=2]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. BN .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP BN .. .. .. WR 
+WP WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(1): -48775
+Chosen move: ChessMove[d5 > b4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d5 > b4: [P: 0, C: 0, F: 00]], hmc=3]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. BN .. .. WP WP .. WP 
+.. .. WP BN .. .. .. WR 
+WP WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(0): 3439
+Chosen move: ChessMove[h3 > d3: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[h3 > d3: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. BN .. .. WP WP .. WP 
+.. .. WP WR .. .. .. .. 
+WP WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(1): 0
+Chosen move: ChessMove[b4 > a2: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[b4 > a2: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP WR .. .. .. .. 
+BN WP .. WK WP .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(0): -33220
+Chosen move: ChessMove[e2 > e3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e2 > e3: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP BP BP .. BP BP BP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP WR WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(1): -32416
+Chosen move: ChessMove[c7 > c6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c7 > c6: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP .. BP .. BP BP BP 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP WR WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(0): 24450
+Chosen move: ChessMove[d3 > d7: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[d3 > d7: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP .. WR .. BP BP BP 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(1): -39690
+Chosen move: ChessMove[g7 > g6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g7 > g6: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR BB BQ BK BB BR .. 
+BP BP .. WR .. BP .. BP 
+.. .. BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(0): 8614
+Chosen move: ChessMove[d7 > d8: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[d7 > d8: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB WR BK BB BR .. 
+BP BP .. .. .. BP .. BP 
+.. .. BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(1): -37225
+Chosen move: ChessMove[e8 > d8: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > d8: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BK .. BB BR .. 
+BP BP .. .. .. BP .. BP 
+.. .. BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+BN WP .. WK .. .. WP .. 
+WR WN .. .. .. WB WN .. 
+EVAL(0): 39136
+Chosen move: ChessMove[a1 > a2: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[a1 > a2: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BK .. BB BR .. 
+BP BP .. .. .. BP .. BP 
+.. .. BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+WR WP .. WK .. .. WP .. 
+.. WN .. .. .. WB WN .. 
+EVAL(1): -35624
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR BB BK .. BB BR .. 
+BP .. .. .. .. BP .. BP 
+.. BP BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+WR WP .. WK .. .. WP .. 
+.. WN .. .. .. WB WN .. 
+EVAL(0): 29656
+Chosen move: ChessMove[a2 > a7: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[a2 > a7: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR BB BK .. BB BR .. 
+WR .. .. .. .. BP .. BP 
+.. BP BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. WP .. 
+.. WN .. .. .. WB WN .. 
+EVAL(1): -58790
+Chosen move: ChessMove[d8 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d8 > e8: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR BB .. BK BB BR .. 
+WR .. .. .. .. BP .. BP 
+.. BP BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. WP .. 
+.. WN .. .. .. WB WN .. 
+EVAL(0): 53330
+Chosen move: ChessMove[g2 > g4: [P: 0, C: 0, F: 01]]
+ChessPosition[00000001, ChessMove[g2 > g4: [P: 0, C: 0, F: 01]], hmc=0]
+.. BR BB .. BK BB BR .. 
+WR .. .. .. .. BP .. BP 
+.. BP BP .. .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. WB WN .. 
+EVAL(1): -57041
+Chosen move: ChessMove[f8 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[f8 > d6: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR BB .. BK .. BR .. 
+WR .. .. .. .. BP .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. WB WN .. 
+EVAL(0): 49415
+Chosen move: ChessMove[a7 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[a7 > b7: [P: 0, C: 0, F: 00]], hmc=2]
+.. BR BB .. BK .. BR .. 
+.. WR .. .. .. BP .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. WB WN .. 
+EVAL(1): -48467
+Chosen move: ChessMove[c8 > b7: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[c8 > b7: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR .. .. BK .. BR .. 
+.. BB .. .. .. BP .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. WB WN .. 
+EVAL(0): 64140
+Chosen move: ChessMove[f1 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f1 > c4: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR .. .. BK .. BR .. 
+.. BB .. .. .. BP .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. WB .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(1): -63963
+Chosen move: ChessMove[e8 > e7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > e7: [P: 0, C: 0, F: 00]], hmc=2]
+.. BR .. .. .. .. BR .. 
+.. BB .. .. BK BP .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. WB .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(0): 74951
+Chosen move: ChessMove[c4 > f7: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > f7: [P: 0, C: 1, F: 00]], hmc=0]
+.. BR .. .. .. .. BR .. 
+.. BB .. .. BK WB .. BP 
+.. BP BP BB .. .. BP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(1): -59015
+Chosen move: ChessMove[c6 > c5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c6 > c5: [P: 0, C: 0, F: 00]], hmc=0]
+.. BR .. .. .. .. BR .. 
+.. BB .. .. BK WB .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(0): 53331
+Chosen move: ChessMove[f7 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f7 > d5: [P: 0, C: 0, F: 00]], hmc=1]
+.. BR .. .. .. .. BR .. 
+.. BB .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP WB .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(1): -53163
+Chosen move: ChessMove[b8 > f8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b8 > f8: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. BR BR .. 
+.. BB .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP WB .. .. .. .. 
+.. .. .. .. WP WP WP WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(0): 29902
+Chosen move: ChessMove[g4 > g5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[g4 > g5: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. BR BR .. 
+.. BB .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP WB .. .. WP .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(1): -31013
+Chosen move: ChessMove[b7 > d5: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[b7 > d5: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. BR BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. .. WP .. 
+.. .. .. .. WP WP .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(0): 25999
+Chosen move: ChessMove[f4 > f5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f4 > f5: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. BR BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. WP WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(1): -25534
+Chosen move: ChessMove[f8 > f5: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[f8 > f5: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. BR WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. WP .. .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. WN .. 
+EVAL(0): 12672
+Chosen move: ChessMove[g1 > f3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[g1 > f3: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. BR WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. WP WN .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(1): -13284
+Chosen move: ChessMove[f5 > f3: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[f5 > f3: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. WP BR .. .. 
+.. WP .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(0): -13637
+Chosen move: ChessMove[d2 > d1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d2 > d1: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. WP BR .. .. 
+.. WP .. .. .. .. .. .. 
+.. WN .. WK .. .. .. .. 
+EVAL(1): 11912
+Chosen move: ChessMove[f3 > e3: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[f3 > e3: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. .. WP .. BR .. .. .. 
+.. WP .. .. .. .. .. .. 
+.. WN .. WK .. .. .. .. 
+EVAL(0): -4410
+Chosen move: ChessMove[b2 > b3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b2 > b3: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP BB .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. WP WP .. BR .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WN .. WK .. .. .. .. 
+EVAL(1): -56780
+Chosen move: ChessMove[d5 > b3: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[d5 > b3: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. BB WP .. BR .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WN .. WK .. .. .. .. 
+EVAL(0): -20991
+Chosen move: ChessMove[d1 > d2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d1 > d2: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. .. .. WP .. .. WP 
+.. BB WP .. BR .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(1): -5149
+Chosen move: ChessMove[e3 > e4: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[e3 > e4: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. .. .. BR .. .. WP 
+.. BB WP .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(0): -13970
+Chosen move: ChessMove[c3 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c3 > c4: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. WP .. BR .. .. WP 
+.. BB .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(1): 21551
+Chosen move: ChessMove[e4 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e4 > d4: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. WP BR .. .. .. WP 
+.. BB .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(0): -61693
+Chosen move: ChessMove[d2 > c1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d2 > c1: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. BB .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. WP BR .. .. .. WP 
+.. BB .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WN WK .. .. .. .. .. 
+EVAL(1): 50246
+Chosen move: ChessMove[d6 > f4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d6 > f4: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. WP BR .. BB .. WP 
+.. BB .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WN WK .. .. .. .. .. 
+EVAL(0): -5097
+Chosen move: ChessMove[c1 > b2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c1 > b2: [P: 0, C: 0, F: 00]], hmc=4]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. WP BR .. BB .. WP 
+.. BB .. .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(1): 9452
+Chosen move: ChessMove[b3 > c4: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[b3 > c4: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. BB BR .. BB .. WP 
+.. .. .. .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. WN .. .. .. .. .. .. 
+EVAL(0): -7332
+Chosen move: ChessMove[b1 > c3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b1 > c3: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. BB BR .. BB .. WP 
+.. .. WN .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 5311
+Chosen move: ChessMove[f4 > d2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[f4 > d2: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP .. 
+.. .. BB BR .. .. .. WP 
+.. .. WN .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -77120
+Chosen move: ChessMove[c3 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c3 > b5: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. WN BP .. .. .. WP .. 
+.. .. BB BR .. .. .. WP 
+.. .. .. .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 85990
+Chosen move: ChessMove[c4 > b5: [P: 0, C: 1, F: 00]]
+ChessPosition[00000000, ChessMove[c4 > b5: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP .. 
+.. .. .. BR .. .. .. WP 
+.. .. .. .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -22528
+Chosen move: ChessMove[h4 > h5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[h4 > h5: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. BR .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 64454
+Chosen move: ChessMove[d4 > b4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d4 > b4: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. BR .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -32227
+Chosen move: ChessMove[b2 > c2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b2 > c2: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. BR .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 76480
+Chosen move: ChessMove[b4 > b2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b4 > b2: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. BR WK BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -143348
+Chosen move: ChessMove[c2 > b2: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[c2 > b2: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. BB .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 69395
+Chosen move: ChessMove[d2 > c1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d2 > c1: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. .. BB .. .. .. .. .. 
+EVAL(0): 4691
+Chosen move: ChessMove[b2 > c3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b2 > c3: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. BB .. .. .. .. .. 
+EVAL(1): 8080
+Chosen move: ChessMove[c1 > b2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c1 > b2: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+.. BB .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -38731
+Chosen move: ChessMove[c3 > b2: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[c3 > b2: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. BB BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 11602
+Chosen move: ChessMove[b5 > c6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > c6: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. WK .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -113613
+Chosen move: ChessMove[b2 > c1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b2 > c1: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. BK .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+EVAL(1): 126282
+Chosen move: ChessMove[e7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e7 > e8: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. BK .. BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+EVAL(0): -124948
+Chosen move: ChessMove[c1 > d2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c1 > d2: [P: 0, C: 0, F: 00]], hmc=4]
+.. .. .. .. BK .. BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 79330
+Chosen move: ChessMove[e8 > f8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > f8: [P: 0, C: 0, F: 00]], hmc=5]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -99951
+Chosen move: ChessMove[d2 > c1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d2 > c1: [P: 0, C: 0, F: 00]], hmc=6]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP BB .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+EVAL(1): 145569
+Chosen move: ChessMove[c6 > h1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c6 > h1: [P: 0, C: 0, F: 00]], hmc=7]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. BB 
+EVAL(0): -124148
+Chosen move: ChessMove[c1 > d2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c1 > d2: [P: 0, C: 0, F: 00]], hmc=8]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. BP .. .. .. WP WP 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 78530
+Chosen move: ChessMove[c5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c5 > c4: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. .. .. .. .. WP WP 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(0): -106758
+Chosen move: ChessMove[d2 > c1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d2 > c1: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. BK BR .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP .. 
+.. .. .. .. .. .. WP WP 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. BB 
+EVAL(1): 152183
+Chosen move: ChessMove[f8 > g7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[f8 > g7: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. .. BK BP 
+.. BP .. .. .. .. BP .. 
+.. .. .. .. .. .. WP WP 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. BB 
+EVAL(0): -135018
+Chosen move: ChessMove[h5 > h6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[h5 > h6: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. .. BK BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. BB 
+EVAL(1): 92089
+Chosen move: ChessMove[g7 > f7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g7 > f7: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. BK .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. BB 
+EVAL(0): -59746
+Chosen move: ChessMove[c1 > d1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c1 > d1: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. BK .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. BB 
+EVAL(1): 70521
+Chosen move: ChessMove[g8 > d8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g8 > d8: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. BR .. .. .. .. 
+.. .. .. .. .. BK .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. BB 
+EVAL(0): -45439
+Chosen move: ChessMove[d1 > e2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d1 > e2: [P: 0, C: 0, F: 00]], hmc=4]
+.. .. .. BR .. .. .. .. 
+.. .. .. .. .. BK .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 30809
+Chosen move: ChessMove[f7 > f8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[f7 > f8: [P: 0, C: 0, F: 00]], hmc=5]
+.. .. .. BR .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(0): -97506
+Chosen move: ChessMove[e2 > e3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e2 > e3: [P: 0, C: 0, F: 00]], hmc=6]
+.. .. .. BR .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 136755
+Chosen move: ChessMove[d8 > d3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d8 > d3: [P: 0, C: 0, F: 00]], hmc=7]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. BR WK .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(0): -144755
+Chosen move: ChessMove[e3 > e2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e3 > e2: [P: 0, C: 0, F: 00]], hmc=8]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. BR .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 106441
+Chosen move: ChessMove[d3 > h3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d3 > h3: [P: 0, C: 0, F: 00]], hmc=9]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(0): -107778
+Chosen move: ChessMove[e2 > e1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e2 > e1: [P: 0, C: 0, F: 00]], hmc=10]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WK .. .. BB 
+EVAL(1): 118186
+Chosen move: ChessMove[h3 > h2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h3 > h2: [P: 0, C: 0, F: 00]], hmc=11]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. BB 
+EVAL(0): -102145
+Chosen move: ChessMove[e1 > f1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e1 > f1: [P: 0, C: 0, F: 00]], hmc=12]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. .. WK .. BB 
+EVAL(1): 158665
+Chosen move: ChessMove[h2 > g2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h2 > g2: [P: 0, C: 0, F: 00]], hmc=13]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. WK .. BB 
+EVAL(0): -172930
+Chosen move: ChessMove[f1 > e1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f1 > e1: [P: 0, C: 0, F: 00]], hmc=14]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. WK .. .. BB 
+EVAL(1): 116670
+Chosen move: ChessMove[g2 > h2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g2 > h2: [P: 0, C: 0, F: 00]], hmc=15]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. BB 
+EVAL(0): -102145
+Chosen move: ChessMove[e1 > f1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e1 > f1: [P: 0, C: 0, F: 00]], hmc=16]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. .. WK .. BB 
+EVAL(1): 158665
+Chosen move: ChessMove[h2 > g2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h2 > g2: [P: 0, C: 0, F: 00]], hmc=17]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. WK .. BB 
+EVAL(0): -172930
+Chosen move: ChessMove[f1 > e1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f1 > e1: [P: 0, C: 0, F: 00]], hmc=18]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. WK .. .. BB 
+EVAL(1): 116670
+Chosen move: ChessMove[g2 > h2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g2 > h2: [P: 0, C: 0, F: 00]], hmc=19]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. BB 
+EVAL(0): -102145
+Chosen move: ChessMove[e1 > f1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e1 > f1: [P: 0, C: 0, F: 00]], hmc=20]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. .. WK .. BB 
+EVAL(1): 158665
+Chosen move: ChessMove[h2 > g2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h2 > g2: [P: 0, C: 0, F: 00]], hmc=21]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. WK .. BB 
+EVAL(0): -172930
+Chosen move: ChessMove[f1 > e1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f1 > e1: [P: 0, C: 0, F: 00]], hmc=22]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. WK .. .. BB 
+EVAL(1): 116670
+Chosen move: ChessMove[g2 > h2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g2 > h2: [P: 0, C: 0, F: 00]], hmc=23]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. BB 
+EVAL(0): -102145
+Chosen move: ChessMove[e1 > f1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e1 > f1: [P: 0, C: 0, F: 00]], hmc=24]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. .. WK .. BB 
+EVAL(1): 158665
+Chosen move: ChessMove[h2 > g2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h2 > g2: [P: 0, C: 0, F: 00]], hmc=25]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. .. WK .. BB 
+EVAL(0): -172930
+Chosen move: ChessMove[f1 > e1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[f1 > e1: [P: 0, C: 0, F: 00]], hmc=26]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. BR .. 
+.. .. .. .. WK .. .. BB 
+EVAL(1): 116670
+Chosen move: ChessMove[g2 > h2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[g2 > h2: [P: 0, C: 0, F: 00]], hmc=27]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. .. WK .. .. BB 
+EVAL(0): -102145
+Chosen move: ChessMove[e1 > d1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e1 > d1: [P: 0, C: 0, F: 00]], hmc=28]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BR 
+.. .. .. WK .. .. .. BB 
+EVAL(1): 105347
+Chosen move: ChessMove[h2 > c2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h2 > c2: [P: 0, C: 0, F: 00]], hmc=29]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. BR .. .. .. .. .. 
+.. .. .. WK .. .. .. BB 
+EVAL(0): -120725
+Chosen move: ChessMove[d1 > c2: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[d1 > c2: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. BP .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 138720
+Chosen move: ChessMove[c4 > c3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[c4 > c3: [P: 0, C: 0, F: 00]], hmc=0]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. BP .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(0): -108309
+Chosen move: ChessMove[c2 > c3: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[c2 > c3: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BB 
+EVAL(1): 73466
+Chosen move: ChessMove[h1 > f3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[h1 > f3: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. WK .. .. BB .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -48425
+Chosen move: ChessMove[c3 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c3 > d4: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. BB .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 76727
+Chosen move: ChessMove[f3 > e2: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[f3 > e2: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BB .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -68479
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=4]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. BB .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 19522
+Chosen move: ChessMove[e2 > d1: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e2 > d1: [P: 0, C: 0, F: 00]], hmc=5]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. BB .. .. .. .. 
+EVAL(0): 12295
+Chosen move: ChessMove[d5 > c6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c6: [P: 0, C: 0, F: 00]], hmc=6]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP WK .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. BB .. .. .. .. 
+EVAL(1): 16959
+Chosen move: ChessMove[d1 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d1 > a4: [P: 0, C: 0, F: 00]], hmc=7]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. BP WK .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -80829
+Chosen move: ChessMove[c6 > b6: [P: 0, C: 1, F: 00]]
+ChessPosition[00000001, ChessMove[c6 > b6: [P: 0, C: 1, F: 00]], hmc=0]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 31645
+Chosen move: ChessMove[a4 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > e8: [P: 0, C: 0, F: 00]], hmc=1]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 6722
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=2]
+.. .. .. .. BB BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 20248
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=3]
+.. .. .. .. .. BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 28731
+Chosen move: ChessMove[c7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > b6: [P: 0, C: 0, F: 00]], hmc=4]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -55701
+Chosen move: ChessMove[b5 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > d7: [P: 0, C: 0, F: 00]], hmc=5]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 17021
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=6]
+.. .. .. .. .. BK .. .. 
+.. .. WK BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 9949
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=7]
+.. .. .. .. BB BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -20248
+Chosen move: ChessMove[c7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > b6: [P: 0, C: 0, F: 00]], hmc=8]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -6722
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=9]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -31645
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=10]
+.. .. .. .. .. BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38975
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=11]
+.. .. .. .. .. BK .. .. 
+.. WK .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 9691
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=12]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -17021
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=13]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 6722
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=14]
+.. .. .. .. BB BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 608
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=15]
+.. .. .. .. .. BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 48371
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=16]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -55701
+Chosen move: ChessMove[b5 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > a4: [P: 0, C: 0, F: 00]], hmc=17]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -31645
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=18]
+.. .. .. .. .. BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38975
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=19]
+.. .. .. .. .. BK .. .. 
+.. WK .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 9691
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=20]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -17021
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=21]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 6722
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=22]
+.. .. .. .. BB BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 20248
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=23]
+.. .. .. .. .. BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 28731
+Chosen move: ChessMove[c7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > b6: [P: 0, C: 0, F: 00]], hmc=24]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -55701
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=25]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 6722
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=26]
+.. .. .. .. BB BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 608
+Chosen move: ChessMove[e8 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > d7: [P: 0, C: 0, F: 00]], hmc=27]
+.. .. .. .. .. BK .. .. 
+.. WK .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 9691
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=28]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -17021
+Chosen move: ChessMove[d7 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > a4: [P: 0, C: 0, F: 00]], hmc=29]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -31645
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=30]
+.. .. .. .. .. BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38975
+Chosen move: ChessMove[a4 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > e8: [P: 0, C: 0, F: 00]], hmc=31]
+.. .. .. .. BB BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -608
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=32]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -6722
+Chosen move: ChessMove[e8 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > d7: [P: 0, C: 0, F: 00]], hmc=33]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 17021
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=34]
+.. .. .. .. .. BK .. .. 
+.. .. WK BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 9949
+Chosen move: ChessMove[d7 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > a4: [P: 0, C: 0, F: 00]], hmc=35]
+.. .. .. .. .. BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -58615
+Chosen move: ChessMove[c7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > b6: [P: 0, C: 0, F: 00]], hmc=36]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 31645
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=37]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 17021
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=38]
+.. .. .. .. .. BK .. .. 
+.. .. WK BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 9949
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=39]
+.. .. .. .. BB BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -20248
+Chosen move: ChessMove[c7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > b6: [P: 0, C: 0, F: 00]], hmc=40]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -6722
+Chosen move: ChessMove[e8 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > d7: [P: 0, C: 0, F: 00]], hmc=41]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 17021
+Chosen move: ChessMove[b6 > b7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > b7: [P: 0, C: 0, F: 00]], hmc=42]
+.. .. .. .. .. BK .. .. 
+.. WK .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -9691
+Chosen move: ChessMove[d7 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > a4: [P: 0, C: 0, F: 00]], hmc=43]
+.. .. .. .. .. BK .. .. 
+.. WK .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -38975
+Chosen move: ChessMove[b7 > b6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b7 > b6: [P: 0, C: 0, F: 00]], hmc=44]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 31645
+Chosen move: ChessMove[a4 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > e8: [P: 0, C: 0, F: 00]], hmc=45]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. WK .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 6722
+Chosen move: ChessMove[b6 > c7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[b6 > c7: [P: 0, C: 0, F: 00]], hmc=46]
+.. .. .. .. BB BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 20248
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=47]
+.. .. .. .. .. BK .. .. 
+.. .. WK .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -58615
+Chosen move: ChessMove[c7 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c7 > d6: [P: 0, C: 0, F: 00]], hmc=48]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 21425
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=49]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 65921
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=50]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > a4: [P: 0, C: 0, F: 00]], hmc=51]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27683
+Chosen move: ChessMove[d5 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d4: [P: 0, C: 0, F: 00]], hmc=52]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 76640
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=53]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27974
+Chosen move: ChessMove[d4 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > c4: [P: 0, C: 0, F: 00]], hmc=54]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=55]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27471
+Chosen move: ChessMove[c4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d5: [P: 0, C: 0, F: 00]], hmc=56]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=57]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27683
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=58]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 21425
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=59]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 65921
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=60]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > a4: [P: 0, C: 0, F: 00]], hmc=61]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27683
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=62]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 21425
+Chosen move: ChessMove[a4 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > e8: [P: 0, C: 0, F: 00]], hmc=63]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 16942
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=64]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=65]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=66]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -65921
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=67]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 16942
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=68]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=69]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=70]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -65921
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=71]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 16942
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=72]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=73]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d4: [P: 0, C: 0, F: 00]], hmc=74]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10706
+Chosen move: ChessMove[b5 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > d7: [P: 0, C: 0, F: 00]], hmc=75]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27974
+Chosen move: ChessMove[d4 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > c4: [P: 0, C: 0, F: 00]], hmc=76]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > a4: [P: 0, C: 0, F: 00]], hmc=77]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -65838
+Chosen move: ChessMove[c4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d5: [P: 0, C: 0, F: 00]], hmc=78]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=79]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c4: [P: 0, C: 0, F: 00]], hmc=80]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=81]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27471
+Chosen move: ChessMove[c4 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d4: [P: 0, C: 0, F: 00]], hmc=82]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38273
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=83]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -76640
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=84]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > e8: [P: 0, C: 0, F: 00]], hmc=85]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10684
+Chosen move: ChessMove[d5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c4: [P: 0, C: 0, F: 00]], hmc=86]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27471
+Chosen move: ChessMove[e8 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > d7: [P: 0, C: 0, F: 00]], hmc=87]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -17172
+Chosen move: ChessMove[c4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d5: [P: 0, C: 0, F: 00]], hmc=88]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -20983
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=89]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10684
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=90]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -16942
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=91]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -21425
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=92]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=93]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c4: [P: 0, C: 0, F: 00]], hmc=94]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=95]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27471
+Chosen move: ChessMove[c4 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d4: [P: 0, C: 0, F: 00]], hmc=96]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38273
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=97]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10706
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=98]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > d7: [P: 0, C: 0, F: 00]], hmc=99]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c4: [P: 0, C: 0, F: 00]], hmc=100]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=101]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27471
+Chosen move: ChessMove[c4 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d4: [P: 0, C: 0, F: 00]], hmc=102]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 38273
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=103]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10706
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=104]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=105]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10684
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=106]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -16942
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=107]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -21425
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=108]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=109]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d4: [P: 0, C: 0, F: 00]], hmc=110]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27974
+Chosen move: ChessMove[d7 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > a4: [P: 0, C: 0, F: 00]], hmc=111]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -76640
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=112]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=113]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=114]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -65921
+Chosen move: ChessMove[b5 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > a4: [P: 0, C: 0, F: 00]], hmc=115]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -21425
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=116]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > d7: [P: 0, C: 0, F: 00]], hmc=117]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > c4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > c4: [P: 0, C: 0, F: 00]], hmc=118]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 17172
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=119]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. WK .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27471
+Chosen move: ChessMove[c4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[c4 > d5: [P: 0, C: 0, F: 00]], hmc=120]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=121]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=122]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -65921
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=123]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 16942
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=124]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=125]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27683
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=126]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 21425
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=127]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 65921
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=128]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > d7: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > d7: [P: 0, C: 0, F: 00]], hmc=129]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 20983
+Chosen move: ChessMove[d5 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d4: [P: 0, C: 0, F: 00]], hmc=130]
+.. .. .. .. .. BK .. .. 
+.. .. .. BB .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27974
+Chosen move: ChessMove[d7 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[d7 > e8: [P: 0, C: 0, F: 00]], hmc=131]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -38273
+Chosen move: ChessMove[d4 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > d5: [P: 0, C: 0, F: 00]], hmc=132]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > b5: [P: 0, C: 0, F: 00]], hmc=133]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=134]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -65921
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=135]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 16942
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=136]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10684
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=137]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -27683
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=138]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 21425
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=139]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 65921
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=140]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -59663
+Chosen move: ChessMove[b5 > e8: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > e8: [P: 0, C: 0, F: 00]], hmc=141]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 10684
+Chosen move: ChessMove[d5 > d6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d6: [P: 0, C: 0, F: 00]], hmc=142]
+.. .. .. .. BB BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -16942
+Chosen move: ChessMove[e8 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[e8 > a4: [P: 0, C: 0, F: 00]], hmc=143]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. WK .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -21425
+Chosen move: ChessMove[d6 > d5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d6 > d5: [P: 0, C: 0, F: 00]], hmc=144]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. WK .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 27683
+Chosen move: ChessMove[a4 > b5: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > b5: [P: 0, C: 0, F: 00]], hmc=145]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. WK .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): 59663
+Chosen move: ChessMove[d5 > d4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d5 > d4: [P: 0, C: 0, F: 00]], hmc=146]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. BB .. .. .. .. WP .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): -10706
+Chosen move: ChessMove[b5 > a4: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[b5 > a4: [P: 0, C: 0, F: 00]], hmc=147]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -76640
+Chosen move: ChessMove[d4 > e3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[d4 > e3: [P: 0, C: 0, F: 00]], hmc=148]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. .. .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+BB .. .. .. .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 108516
+Chosen move: ChessMove[a4 > c6: [P: 0, C: 0, F: 00]]
+ChessPosition[00000000, ChessMove[a4 > c6: [P: 0, C: 0, F: 00]], hmc=149]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. BB .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. WK .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(0): -137557
+Chosen move: ChessMove[e3 > d3: [P: 0, C: 0, F: 00]]
+ChessPosition[00000001, ChessMove[e3 > d3: [P: 0, C: 0, F: 00]], hmc=150]
+.. .. .. .. .. BK .. .. 
+.. .. .. .. .. .. .. BP 
+.. .. BB .. .. .. BP WP 
+.. .. .. .. .. .. WP .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. WK .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. 
+EVAL(1): 0
+STALEMATE - Game end

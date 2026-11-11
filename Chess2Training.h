@@ -7,6 +7,7 @@
 #include "ChessUtils.h"
 #include "Chess2Evaluation.h"
 #include "Chess2Search.h"
+#include "Chess2PstNNUE.h"
 
 // Test two engines. Returns -1 if white wins, 1 if black wins, and 0 on a draw.
 int testEngines(SearchEngine& white, SearchEngine& black, int depth = 4, bool verbose = false) {
@@ -38,14 +39,14 @@ int testEngines(SearchEngine& white, SearchEngine& black, int depth = 4, bool ve
 // Runs a tournament of N machines and I iterations in the following steps:
 // Round-robins each machine against another machine, in (games) games each of either side, and keeps track of the end score (win = 2, draw = 1, lose = 0)
 // The top 2 machines get cross bred and mutated to form N - 2 additional machines to form the next generation. (Keep the two survivors in case they come out on top again)
-std::vector<NNUE> breedNNUE(int N = 16, int iters = 4, int games = 4, int depth = 4) {
+std::vector<pstNNUE> breedPstNNUE(int N = 16, int iters = 4, int games = 4, int depth = 4) {
 	if (N < 4) N = 4;
 	if (iters < 1) iters = 1;
 	if (games < 1) games = 1;
 	if (depth < 1) depth = 1;
 
-	std::vector<NNUE> machines(N);
-	for (int i = 0; i < N; i++) machines[i] = randomNNUE();
+	std::vector<pstNNUE> machines(N);
+	for (int i = 0; i < N; i++) machines[i] = randomPstNNUE();
 	std::vector<int> scores(N, 0);
 
 	AlphaBetaEngine A, B;
@@ -85,12 +86,12 @@ std::vector<NNUE> breedNNUE(int N = 16, int iters = 4, int games = 4, int depth 
 		std::cout << std::endl;
 		
 		// end testing
-		std::vector<std::pair<int, NNUE>> toSort(N);
+		std::vector<std::pair<int, pstNNUE>> toSort(N);
 		for (int i = 0; i < N; i++) toSort[i] = {-scores[i], machines[i]};
 		std::sort(toSort.begin(), toSort.end());
 		machines[0] = toSort[0].second;
 		machines[1] = toSort[1].second;
-		for (int i = 2; i < N; i++) machines[i] = mutate(crossbreed(machines[0], machines[1]));
+		for (int i = 2; i < N; i++) machines[i] = mutatePstNNUE(crossbreedPstNNUE(machines[0], machines[1]));
 	}
 
 	return machines;

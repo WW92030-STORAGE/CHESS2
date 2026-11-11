@@ -26,6 +26,10 @@ std::uniform_real_distribution<float> rand01(0, 1);
 std::uniform_int_distribution<int> randBool(0, 1);
 std::uniform_int_distribution<int> randByte(0, 255);
 
+void initPRNG(uint64_t x) {
+	CH2_PRNG = std::mt19937(x);
+}
+
 // BEGIN GENERAL BIT THINGS
 
 std::string u8tos(uint8_t v) {

@@ -1,11 +1,12 @@
 #ifndef CHESS2_BBBLSLSSL_NORMALEXISTING
 #define CHESS2_BBBLSLSSL_NORMALEXISTING
 
+#include "Chess2ALL.h"
+
 #include <bits/stdc++.h>
 using namespace std;
-#include "Chess2.h"
-#include "Chess2Evaluation.h"
-#include "Chess2Search.h"
+
+
 
 void testenvironment() {
 	ChessMove cm(getIndex("d2"), getIndex("d4"), 1);
@@ -218,15 +219,15 @@ void testMateIn3Hard2() {
 void runSimulation() {
 	Turochamp tcEval;
 	Evaluation noobEval;
-	NNUE nn1 = randomNNUE();
-	NNUE nn2 = randomNNUE();
+	pstNNUE nn1 = randomPstNNUE();
+	pstNNUE nn2 = randomPstNNUE();
 	AlphaBetaEngine mmSearch{&nn1};
 	AlphaBetaEngine noobSearch{&nn2};
 	// playAgainstEngine(mmSearch, 1, 4);
 	EngineOnEngine(mmSearch, noobSearch, 2, 2);
 }
 
-void testNNUE() {
+void testPstNNUE() {
 	cout << "TestNNUE\n";
 	ChessPosition pos;
 	pos.clear();
@@ -241,7 +242,7 @@ void testNNUE() {
 	pos.black[4] |= onehot(39);
 	pos.black[5] |= onehot(40);
 
-	NNUE nnue = randomNNUE();
+	pstNNUE nnue = randomPstNNUE();
 	int x1 = nnue(pos);
 	
 	// e4 > e6
