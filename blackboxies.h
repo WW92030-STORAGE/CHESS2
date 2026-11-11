@@ -297,6 +297,7 @@ void testPST() {
 	int x2 = nnue(pos2);
 	int x3 = nnue(pos3);
 	int x4 = nnue(pos4);
+	cout << x1 << " " << x2 << " " << x3 << " " << x4 << "\n";
 	srand(1);
 	for (int i = 0; i < 1000; i++) {
 		int pick = rand() & 3;

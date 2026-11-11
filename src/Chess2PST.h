@@ -34,12 +34,17 @@ struct PieceSquareTable : Evaluation {
 
 		for (int i = 0; i < 12; i++) bitmasks[i] = incoming[i];
 
-		for (int i = 0; i < INPUT_SIZE; i++) {
-			uint64_t square = onehot(i & 63);
-			uint64_t no = (i>>6);
-
-			if (on[no] & square) res += weights[i];
-			if (off[no] & square) res -= weights[i];
+		for (int no = 0; no < 12; no++) {
+			if (on[no]) {
+				for (int square = 0; square < 64; square++) {
+					if (on[no] & onehot(square)) res += weights[(no<<6) | square];
+				}
+			}
+			if (off[no]) {
+				for (int square = 0; square < 64; square++) {
+					if (off[no] & onehot(square)) res -= weights[(no<<6) | square];
+				}
+			}
 		}
 		return res;
 	}

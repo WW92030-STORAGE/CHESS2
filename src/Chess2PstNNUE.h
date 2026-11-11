@@ -3,6 +3,8 @@
 
 #include "Chess2Evaluation.h"
 
+// TODO make the weights of this thing a 1D array similar to PieceSquareTable.
+
 // A failed attempt at making a PST based NNUE with one hidden layer.
 
 // Individual pieces and values. A Neural evaluation function has a 2D array of weights that can be scanned through.

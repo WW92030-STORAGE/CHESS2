@@ -26,8 +26,8 @@ void trainPstNNUE() {
 }
 
 void trainPST() {
-	int N = 16;
-	int ITERS = 16;
+	int N = 8;
+	int ITERS = 8;
 	int GAMES = 8;
 	int DEPTH = 2;
 	auto nnue = breedPST(N, ITERS, GAMES, DEPTH); 
