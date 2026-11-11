@@ -228,7 +228,7 @@ void runSimulation() {
 }
 
 void testPstNNUE() {
-	cout << "TestNNUE\n";
+	cout << "TestPstNNUE\n";
 	ChessPosition pos;
 	pos.clear();
 	pos.white[0] |= (onehot(8) | onehot(17) | onehot(34));
@@ -243,6 +243,46 @@ void testPstNNUE() {
 	pos.black[5] |= onehot(40);
 
 	pstNNUE nnue = randomPstNNUE();
+	int x1 = nnue(pos);
+	
+	// e4 > e6
+	ChessMove move(28, 28 + 16, 0);
+	ChessMove move2(28, 28 + 1, 0);
+	ChessPosition pos2 = pos;
+	ChessPosition pos3 = pos;
+	ChessPosition pos4;
+	pos4.init();
+	if (pos2.isLegalMove(move)) pos2.apply(move);
+	if (pos3.isLegalMove(move2)) pos3.apply(move2);
+	int x2 = nnue(pos2);
+	int x3 = nnue(pos3);
+	int x4 = nnue(pos4);
+	srand(1);
+	for (int i = 0; i < 1000; i++) {
+		int pick = rand() & 3;
+		if (pick == 0) assert(nnue(pos) == x1);
+		if (pick == 1) assert(nnue(pos2) == x2);
+		if (pick == 2) assert(nnue(pos3) == x3);
+		if (pick == 3) assert(nnue(pos4) == x4);
+	}
+}
+
+void testPST() {
+	cout << "TestPST\n";
+	ChessPosition pos;
+	pos.clear();
+	pos.white[0] |= (onehot(8) | onehot(17) | onehot(34));
+	pos.white[3] |= onehot(62);
+	pos.white[4] |= onehot(28);
+	pos.white[5] |= onehot(1);
+
+	pos.black[0] |= (onehot(12) | onehot(25) | onehot(49) | onehot(47));
+	pos.black[2] |= onehot(18);
+	pos.black[3] |= onehot(50);
+	pos.black[4] |= onehot(39);
+	pos.black[5] |= onehot(40);
+
+	PieceSquareTable nnue = randomPST();
 	int x1 = nnue(pos);
 	
 	// e4 > e6

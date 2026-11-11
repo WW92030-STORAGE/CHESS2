@@ -7,7 +7,11 @@
 #include "ChessUtils.h"
 #include "Chess2Evaluation.h"
 #include "Chess2Search.h"
+
+#include "Chess2PST.h"
 #include "Chess2PstNNUE.h"
+
+// TODO modularize all this
 
 // Test two engines. Returns -1 if white wins, 1 if black wins, and 0 on a draw.
 int testEngines(SearchEngine& white, SearchEngine& black, int depth = 4, bool verbose = false) {
@@ -92,6 +96,64 @@ std::vector<pstNNUE> breedPstNNUE(int N = 16, int iters = 4, int games = 4, int 
 		machines[0] = toSort[0].second;
 		machines[1] = toSort[1].second;
 		for (int i = 2; i < N; i++) machines[i] = mutatePstNNUE(crossbreedPstNNUE(machines[0], machines[1]));
+	}
+
+	return machines;
+}
+
+std::vector<PieceSquareTable> breedPST(int N = 16, int iters = 4, int games = 4, int depth = 4) {
+	if (N < 4) N = 4;
+	if (iters < 1) iters = 1;
+	if (games < 1) games = 1;
+	if (depth < 1) depth = 1;
+
+	std::vector<PieceSquareTable> machines(N);
+	for (int i = 0; i < N; i++) machines[i] = randomPST();
+	std::vector<int> scores(N, 0);
+
+	AlphaBetaEngine A, B;
+
+	for (int iter = 0; iter < iters; iter++) {
+		std::cout << "ROUND " << iter + 1 << "/" << iters << "\n";
+		for (int i = 0; i < scores.size(); i++) scores[i] = 0;
+		for (int a = 0; a < N; a++) {
+			for (int b = 0; b < a; b++) {
+				A.eval = &machines[a];
+				B.eval = &machines[b];
+
+				for (int g = 0; g < games; g++) {
+					int verdict = testEngines(A, B, depth);
+					std::cout << "[" << a << "/" << b << ": " << verdict << "] ";
+					std::cout.flush(); 
+					if (verdict == -1) scores[a] += 2;
+					else if (verdict == 1) scores[b] += 2;
+					else if (verdict == 0) {
+						scores[a]++; scores[b]++;
+					}
+
+					verdict = testEngines(B, A, depth);
+					std::cout << "[" << b << "/" << a << ": " << verdict << "] ";
+					std::cout.flush(); 
+					if (verdict == -1) scores[b] += 2;
+					else if (verdict == 1) scores[a] += 2;
+					else if (verdict == 0) {
+						scores[a]++; scores[b]++;
+					}
+				}
+			}
+		}
+		std::cout << std::endl;
+		std::cout << "SCORE: ";
+		for (int i = 0; i < 8; i++) std::cout << "[" << i << ": " << scores[i] << "]";
+		std::cout << std::endl;
+		
+		// end testing
+		std::vector<std::pair<int, PieceSquareTable>> toSort(N);
+		for (int i = 0; i < N; i++) toSort[i] = {-scores[i], machines[i]};
+		std::sort(toSort.begin(), toSort.end());
+		machines[0] = toSort[0].second;
+		machines[1] = toSort[1].second;
+		for (int i = 2; i < N; i++) machines[i] = mutatePST(crossbreedPST(machines[0], machines[1]));
 	}
 
 	return machines;

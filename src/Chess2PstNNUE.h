@@ -3,6 +3,8 @@
 
 #include "Chess2Evaluation.h"
 
+// A failed attempt at making a PST based NNUE with one hidden layer.
+
 // Individual pieces and values. A Neural evaluation function has a 2D array of weights that can be scanned through.
 struct pstNNUE : Evaluation {
 	static const int INPUT_SIZE = 64 * 12;
