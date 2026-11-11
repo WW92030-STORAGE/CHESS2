@@ -22,7 +22,7 @@ int testEngines(SearchEngine& white, SearchEngine& black, int depth = 4, bool ve
 		// printMovesWithEvals(pos, *((pos.sideToMove() ? black : white).eval), 3);
 		if (pos.checkmated()) {
 			if (verbose) std::cout << "CHECKMATE - Game end. Player " << !pos.sideToMove() << " WINS\n";
-			return (pos.sideToMove()) ? -1 : 1;
+			return (pos.sideToMove()) ? 1 : -1;
 		} else if (pos.noLegalMoves() || pos.forcedStalemate()) {
 			if (verbose) std::cout << "STALEMATE - Game end\n";
 			break;
