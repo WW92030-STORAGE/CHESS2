@@ -30,6 +30,10 @@ void initPRNG(uint64_t x) {
 	CH2_PRNG = std::mt19937(x);
 }
 
+// BEGIN MISCELLANEOUS
+
+// END MISCELLANEOUS
+
 // BEGIN GENERAL BIT THINGS
 
 std::string u8tos(uint8_t v) {

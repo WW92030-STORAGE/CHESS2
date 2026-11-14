@@ -34,10 +34,6 @@ struct Evaluation {
 		for (int i = 0; i < 5; i++) {
 			res += weights[i] * popCount((stm ? pos.black : pos.white)[i]);
 		}
-		if (pos.isInCheck()) {
-			if (res > 0) res>>=1;
-			else res = res + res;
-		}
 		pos.setSTM(originalSTM);
 		return res;
 	}
@@ -150,11 +146,6 @@ struct Turochamp : Evaluation {
 
 		res = weights[0] * materialsum + weights[1] * nonKPmob + weights[2] * defendingsum + weights[3] * Kmob + weights[4] * castle + weights[5] * Ksafety + weights[6] * Pattack + weights[7] * Padv;
 
-		if (pos.isInCheck()) {
-			if (res > 0) res>>=1;
-			else res = res + res;
-		}
-
 		pos.setSTM(originalSTM);
 		return res;
 	}
@@ -177,7 +168,7 @@ EVAL crossbreedEvaluation(EVAL a, EVAL b) {
 }
 
 template <typename EVAL>
-EVAL mutateEvaluation(EVAL n, double threshold = 0.005) {
+EVAL mutateEvaluation(EVAL n, double threshold = 0.05) {
 	EVAL_EXTENDS_EVALUATION
 	EVAL res = n;
 	for (int i = 0; i < res.weights.size(); i++) {
