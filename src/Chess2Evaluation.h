@@ -75,8 +75,7 @@ struct Evaluation {
 };
 
 struct Turochamp : Evaluation {
-	std::vector<int8_t> weights;
-	Turochamp() {weights = std::vector<int8_t>(8, 1); };
+	Turochamp() : Evaluation() {weights = std::vector<int8_t>(8, 1); };
 	// Turing-Champernowne method, with some slight variaions
 	virtual eval_t evaluateSingleSide(ChessPosition& pos, bool stm) {
 		bool originalSTM = pos.sideToMove();
@@ -168,7 +167,7 @@ EVAL crossbreedEvaluation(EVAL a, EVAL b) {
 }
 
 template <typename EVAL>
-EVAL mutateEvaluation(EVAL n, double threshold = 0.05) {
+EVAL mutateEvaluation(EVAL n, double threshold = 0.1) {
 	EVAL_EXTENDS_EVALUATION
 	EVAL res = n;
 	for (int i = 0; i < res.weights.size(); i++) {

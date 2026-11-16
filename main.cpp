@@ -45,19 +45,21 @@ void trainEvaluation(int N = 16, int ITERS = 8, int GAMES = 4, int DEPTH = 3) {
 	std::cout << "File closed\n";
 }
 
-void playGameAgainstWhatever() {
+template <typename EVAL>
+void playGameAgainstWhatever(std::vector<int8_t> x) {
+	EVAL_EXTENDS_EVALUATION
 	srand(time(0));
 	initPRNG(rand());
 
-	SymmetricPST pst = randomEvaluation<SymmetricPST>();
+	EVAL nnue = randomEvaluation<EVAL>();
+	if (x.size() == nnue.weights.size()) nnue.weights = x;
 
 
-	AlphaBetaEngine engine(&pst);
-	EngineOnEngine(engine, engine, 3, 3);
+	AlphaBetaEngine engine(&nnue);
 	playAgainstEngine(engine);
 }
 
 int main() {
-	trainEvaluation<Turochamp>(8, 8, 4, 2);
+	playGameAgainstWhatever<Turochamp>(weightsxx);
 	return 0;
 }

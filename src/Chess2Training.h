@@ -14,6 +14,10 @@
 
 // TODO modularize all this
 
+const int8_t TRAINING_WIN = 3;
+const int8_t TRAINING_DRAW = 1;
+const int8_t TRAINING_LOSS = -3;
+
 // Test two engines. Returns -1 if white wins, 1 if black wins, and 0 on a draw.
 int testEngines(SearchEngine& white, SearchEngine& black, int depth = 4, bool verbose = false) {
 	ChessPosition pos;
@@ -70,19 +74,19 @@ std::vector<EVAL> breedEvaluation(int N = 16, int iters = 4, int games = 4, int 
 					int verdict = testEngines(A, B, depth);
 					std::cout << "[" << a << "/" << b << ": " << verdict << "] ";
 					std::cout.flush(); 
-					if (verdict == -1) scores[a] += 2;
-					else if (verdict == 1) scores[b] += 2;
+					if (verdict == -1) {scores[a] += TRAINING_WIN; scores[b] += TRAINING_LOSS; }
+					else if (verdict == 1) {scores[b] += TRAINING_WIN; scores[a] += TRAINING_LOSS; }
 					else if (verdict == 0) {
-						scores[a]++; scores[b]++;
+						scores[a] += TRAINING_DRAW; scores[b] += TRAINING_DRAW;
 					}
 
 					verdict = testEngines(B, A, depth);
 					std::cout << "[" << b << "/" << a << ": " << verdict << "] ";
 					std::cout.flush(); 
-					if (verdict == -1) scores[b] += 2;
-					else if (verdict == 1) scores[a] += 2;
+					if (verdict == -1) {scores[a] += TRAINING_WIN; scores[b] += TRAINING_LOSS; }
+					else if (verdict == 1) {scores[b] += TRAINING_WIN; scores[a] += TRAINING_LOSS; }
 					else if (verdict == 0) {
-						scores[a]++; scores[b]++;
+						scores[a] += TRAINING_DRAW; scores[b] += TRAINING_DRAW;
 					}
 				}
 			}
@@ -131,19 +135,19 @@ std::vector<pstNNUE> breedPstNNUE(int N = 16, int iters = 4, int games = 4, int 
 					int verdict = testEngines(A, B, depth);
 					std::cout << "[" << a << "/" << b << ": " << verdict << "] ";
 					std::cout.flush(); 
-					if (verdict == -1) scores[a] += 2;
-					else if (verdict == 1) scores[b] += 2;
+					if (verdict == -1) {scores[a] += TRAINING_WIN; scores[b] += TRAINING_LOSS; }
+					else if (verdict == 1) {scores[b] += TRAINING_WIN; scores[a] += TRAINING_LOSS; }
 					else if (verdict == 0) {
-						scores[a]++; scores[b]++;
+						scores[a] += TRAINING_DRAW; scores[b] += TRAINING_DRAW;
 					}
 
 					verdict = testEngines(B, A, depth);
 					std::cout << "[" << b << "/" << a << ": " << verdict << "] ";
 					std::cout.flush(); 
-					if (verdict == -1) scores[b] += 2;
-					else if (verdict == 1) scores[a] += 2;
+					if (verdict == -1) {scores[a] += TRAINING_WIN; scores[b] += TRAINING_LOSS; }
+					else if (verdict == 1) {scores[b] += TRAINING_WIN; scores[a] += TRAINING_LOSS; }
 					else if (verdict == 0) {
-						scores[a]++; scores[b]++;
+						scores[a] += TRAINING_DRAW; scores[b] += TRAINING_DRAW;
 					}
 				}
 			}

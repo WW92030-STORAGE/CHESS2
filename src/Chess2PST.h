@@ -8,11 +8,10 @@
 // Individual pieces and values. A Neural evaluation function has a 2D array of weights that can be scanned through.
 struct PieceSquareTable : Evaluation {
 	static const int INPUT_SIZE = 64 * 12;
-	std::vector<int8_t> weights; // This is the thing that will be iterated on in the training program
 	std::vector<uint64_t> bitmasks; // These will store the six white and then six black bitmasks
 	eval_t res = 0;
 
-	PieceSquareTable() {
+	PieceSquareTable() : Evaluation() {
 		bitmasks = std::vector<uint64_t>(12, 0);
 		weights = std::vector<int8_t>(INPUT_SIZE, 0);
 	}
@@ -58,7 +57,6 @@ struct PieceSquareTable : Evaluation {
 
 struct SymmetricPST : PieceSquareTable {
 	static const int INPUT_SIZE = 32 * 12;
-	std::vector<int8_t> weights; // This is the thing that will be iterated on in the training program
 	std::vector<uint64_t> bitmasks; // These will store the six white and then six black bitmasks
 	eval_t res = 0;
 
